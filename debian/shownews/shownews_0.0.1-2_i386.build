@@ -1,0 +1,81 @@
+ fakeroot debian/rules clean
+dh_testdir
+dh_testroot
+rm -f build-stamp configure-stamp
+/usr/bin/make clean
+make[1]: Entering directory `/home/davide/debian/shownews/shownews'
+cleaning...
+rm -f shownews main.o io-internal.o interface.o dialog.o conversions.o
+make[1]: Leaving directory `/home/davide/debian/shownews/shownews'
+dh_clean 
+ dpkg-source -b shownews
+dpkg-source: warning: source directory './shownews' is not <sourcepackage>-<upstreamversion> 'shownews-0.0.1'
+dpkg-source: warning: .orig directory name shownews.orig is not <package>-<upstreamversion> (wanted shownews-0.0.1.orig)
+dpkg-source: building shownews using existing shownews_0.0.1.orig.tar.gz
+dpkg-source: building shownews in shownews_0.0.1-2.diff.gz
+dpkg-source: building shownews in shownews_0.0.1-2.dsc
+ debian/rules build
+dh_testdir
+touch configure-stamp
+dh_testdir
+/usr/bin/make
+make[1]: Entering directory `/home/davide/debian/shownews/shownews'
+shownews build options:
+CFLAGS   = -Wall -O2 -I/usr/include/libxml2 
+LDFLAGS  = -lncursesw -lmrss -L/usr/lib -lxml2 
+CC       = gcc
+
+CC main.c
+CC io-internal.c
+CC interface.c
+CC dialog.c
+CC conversions.c
+CC -o shownews
+
+DONE
+make[1]: Leaving directory `/home/davide/debian/shownews/shownews'
+touch build-stamp
+ fakeroot debian/rules binary
+dh_testdir
+dh_testroot
+dh_clean -k 
+dh_installdirs
+/usr/bin/make PREFIX=/usr DESTDIR=/home/davide/debian/shownews/shownews/debian/shownews install
+make[1]: Entering directory `/home/davide/debian/shownews/shownews'
+if [ ! -d "/home/davide/debian/shownews/shownews/debian/shownews/usr/bin" ]; then \
+		mkdir -p /home/davide/debian/shownews/shownews/debian/shownews/usr/bin; \
+	fi
+cp shownews /home/davide/debian/shownews/shownews/debian/shownews/usr/bin
+cp shownews.1  /home/davide/debian/shownews/shownews/debian/shownews/usr/share/man/man1
+make[1]: Leaving directory `/home/davide/debian/shownews/shownews'
+dh_testdir
+dh_testroot
+dh_installchangelogs 
+dh_installdocs
+dh_installexamples
+dh_installmenu
+dh_installman
+dh_link
+dh_strip
+dh_compress
+dh_fixperms
+dh_installdeb
+dh_shlibdeps
+dh_gencontrol
+dpkg-gencontrol: warning: unknown substitution variable ${misc:Depends}
+dh_md5sums
+dh_builddeb
+dpkg-deb: costruisco il pacchetto `shownews' in `../shownews_0.0.1-2_i386.deb'.
+ dpkg-genchanges
+dpkg-genchanges: not including original source code in upload
+dpkg-buildpackage (debuild emulation): binary and diff upload (original source NOT included)
+Now running lintian...
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile shownews_0.0.1-2.dsc Davide Truffa <davide@catoblepa.org>
+gpg: gpg-agent is not available in this session
+
+ signfile shownews_0.0.1-2_i386.changes Davide Truffa <davide@catoblepa.org>
+gpg: gpg-agent is not available in this session
+
+Successfully signed dsc and changes files

@@ -1,0 +1,38 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.7
+Date: Tue, 10 Jul 2007 12:23:04 +0200
+Source: fbpanel
+Binary: fbpanel
+Architecture: source i386
+Version: 4.9-2
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ fbpanel    - A lightweight X11 desktop panel
+Closes: 321030 432355
+Changes: 
+ fbpanel (4.9-2) unstable; urgency=low
+ .
+   * Added genmon plugins. (Closes: #432355)
+     (display the output of a program/script into the panel)
+   * Fixed other minor issues:
+     - transparency didn't work correctly with default configuration
+     - wrong path in "fbpanel configurator"
+   * Added information about dclock plugin. (Closes: #321030)
+Files: 
+ 1862ebe9c61c46555498deff1e63ba39 616 x11 optional fbpanel_4.9-2.dsc
+ 67a2a442a038ba80094c8cc06784dd08 169637 x11 optional fbpanel_4.9.orig.tar.gz
+ 12cc0aa42f7dd3a0b469b9ba4ed74fdd 9560 x11 optional fbpanel_4.9-2.diff.gz
+ 1badaaff89be5d9d6d04d6dbb6c8e46c 181382 x11 optional fbpanel_4.9-2_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFGlfMKAIz/pxUagfgRAqA2AKDF0EhhUljD18+UZyXv/rKPkr2/0QCghro9
+i3GlbcK76omZRk1lvCtFTbI=
+=wnTm
+-----END PGP SIGNATURE-----

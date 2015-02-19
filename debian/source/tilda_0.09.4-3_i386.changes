@@ -1,0 +1,20 @@
+Format: 1.7
+Date: Mon, 11 Jun 2007 21:19:59 +0200
+Source: tilda
+Binary: tilda
+Architecture: source i386
+Version: 0.09.4-3
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ tilda      - terminal emulator with first person shooter console likeness
+Changes: 
+ tilda (0.09.4-3) unstable; urgency=low
+ .
+   * Added web-link patch
+Files: 
+ 6a0bf51c6a392c0338b20002bd23e978 412 x11 optional tilda_0.09.4-3.dsc
+ aa4d5ec8653a1d57f32af2a6082ce71a 29242 x11 optional tilda_0.09.4-3.diff.gz
+ 239f1a3f069b8c4deff5ff33a885f937 39038 x11 optional tilda_0.09.4-3_i386.deb

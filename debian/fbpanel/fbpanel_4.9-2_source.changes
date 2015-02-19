@@ -1,0 +1,26 @@
+Format: 1.7
+Date: Tue, 10 Jul 2007 12:23:04 +0200
+Source: fbpanel
+Binary: fbpanel
+Architecture: source
+Version: 4.9-2
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ fbpanel    - A lightweight X11 desktop panel
+Closes: 321030 432355
+Changes: 
+ fbpanel (4.9-2) unstable; urgency=low
+ .
+   * Added genmon plugins. (Closes: #432355)
+     (display the output of a program/script into the panel)
+   * Fixed other minor issues:
+     - transparency didn't work correctly with default configuration
+     - wrong path in "fbpanel configurator"
+   * Added information about dclock plugin. (Closes: #321030)
+Files: 
+ 1840292eac4b7cf65657e67cd2ea05e3 379 x11 optional fbpanel_4.9-2.dsc
+ 67a2a442a038ba80094c8cc06784dd08 169637 x11 optional fbpanel_4.9.orig.tar.gz
+ 9e74d7d03dccd903c8852d852eedc0d4 9560 x11 optional fbpanel_4.9-2.diff.gz

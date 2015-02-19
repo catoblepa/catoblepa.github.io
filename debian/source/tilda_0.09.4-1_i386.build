@@ -1,0 +1,310 @@
+ fakeroot debian/rules clean
+dh_testdir
+dh_testroot
+rm -f build-stamp 
+/usr/bin/make distclean
+make[1]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[1]: *** No rule to make target `distclean'.  Stop.
+make[1]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make: [clean] Error 2 (ignored)
+cp -f /usr/share/misc/config.sub config.sub
+cp -f /usr/share/misc/config.guess config.guess
+dh_clean 
+	rm -f debian/tilda.substvars
+	rm -f debian/tilda.*.debhelper
+	rm -rf debian/tilda
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o -name core -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+ dpkg-source -b tilda-0.09.4
+dpkg-source: building tilda using existing tilda_0.09.4.orig.tar.gz
+dpkg-source: building tilda in tilda_0.09.4-1.diff.gz
+dpkg-source: building tilda in tilda_0.09.4-1.dsc
+ debian/rules build
+dh_testdir
+CFLAGS="-Wall -g -O2 -Wl,-z,defs" ./configure --host=i486-linux-gnu --build=i486-linux-gnu --prefix=/usr --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for i486-linux-gnu-gcc... i486-linux-gnu-gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether i486-linux-gnu-gcc accepts -g... yes
+checking for i486-linux-gnu-gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of i486-linux-gnu-gcc... gcc3
+checking whether i486-linux-gnu-gcc and cc understand -c and -o together... yes
+checking for i486-linux-gnu-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for PACKAGE... yes
+checking how to run the C preprocessor... i486-linux-gnu-gcc -E
+checking for X... libraries , headers 
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking for unistd.h... (cached) yes
+checking confuse.h usability... yes
+checking confuse.h presence... yes
+checking for confuse.h... yes
+checking for an ANSI C-conforming const... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working strtod... yes
+checking for mkdir... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strncasecmp... yes
+checking for strstr... yes
+checking for strtol... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating tilda-config.h
+config.status: executing depfiles commands
+dh_testdir
+/usr/bin/make
+make[1]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4'
+/usr/bin/make  all-recursive
+make[2]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4'
+Making all in src
+make[3]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4/src'
+i486-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..   -DDATADIR='"/usr/share"' -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs -MT tilda-tilda_window.o -MD -MP -MF .deps/tilda-tilda_window.Tpo -c -o tilda-tilda_window.o `test -f 'tilda_window.c' || echo './'`tilda_window.c
+tilda_window.c: In function ‘get_config_file_name’:
+tilda_window.c:119: warning: implicit declaration of function ‘print_and_exit’
+tilda_window.c: In function ‘init_tilda_window_instance’:
+tilda_window.c:143: warning: implicit declaration of function ‘getinstance’
+tilda_window.c: In function ‘find_tt_in_g_list’:
+tilda_window.c:185: warning: unused variable ‘list_length’
+tilda_window.c:185: warning: unused variable ‘i’
+i486-linux-gnu-gcc: -z: linker input file unused because linking not done
+i486-linux-gnu-gcc: defs: linker input file unused because linking not done
+mv -f .deps/tilda-tilda_window.Tpo .deps/tilda-tilda_window.Po
+i486-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..   -DDATADIR='"/usr/share"' -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs -MT tilda-tilda_terminal.o -MD -MP -MF .deps/tilda-tilda_terminal.Tpo -c -o tilda-tilda_terminal.o `test -f 'tilda_terminal.c' || echo './'`tilda_terminal.c
+i486-linux-gnu-gcc: -z: linker input file unused because linking not done
+i486-linux-gnu-gcc: defs: linker input file unused because linking not done
+mv -f .deps/tilda-tilda_terminal.Tpo .deps/tilda-tilda_terminal.Po
+i486-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..   -DDATADIR='"/usr/share"' -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs -MT tilda-wizard.o -MD -MP -MF .deps/tilda-wizard.Tpo -c -o tilda-wizard.o `test -f 'wizard.c' || echo './'`wizard.c
+wizard.c: In function ‘compatibility’:
+wizard.c:774: warning: unused variable ‘button_defaults’
+wizard.c: In function ‘apply_settings’:
+wizard.c:911: warning: implicit declaration of function ‘generate_animation_positions’
+wizard.c:913: warning: implicit declaration of function ‘write_config_file’
+wizard.c:853: warning: unused variable ‘tmp_str’
+wizard.c: In function ‘wizard’:
+wizard.c:984: warning: unused variable ‘style’
+wizard.c:983: warning: unused variable ‘image_pix_mask’
+wizard.c:982: warning: unused variable ‘image_pix’
+wizard.c:981: warning: unused variable ‘image’
+wizard.c:980: warning: unused variable ‘table2’
+wizard.c:975: warning: unused variable ‘button’
+wizard.c: At top level:
+wizard.c:42: warning: ‘close_dialog’ defined but not used
+wizard.c:944: warning: ‘exit_app’ defined but not used
+i486-linux-gnu-gcc: -z: linker input file unused because linking not done
+i486-linux-gnu-gcc: defs: linker input file unused because linking not done
+mv -f .deps/tilda-wizard.Tpo .deps/tilda-wizard.Po
+i486-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..   -DDATADIR='"/usr/share"' -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs -MT tilda-callback_func.o -MD -MP -MF .deps/tilda-callback_func.Tpo -c -o tilda-callback_func.o `test -f 'callback_func.c' || echo './'`callback_func.c
+callback_func.c: In function ‘window_title_changed’:
+callback_func.c:277: warning: unused variable ‘current_page_num’
+callback_func.c:275: warning: unused variable ‘page’
+callback_func.c: At top level:
+callback_func.c:46: warning: ‘fix_size_settings’ defined but not used
+i486-linux-gnu-gcc: -z: linker input file unused because linking not done
+i486-linux-gnu-gcc: defs: linker input file unused because linking not done
+mv -f .deps/tilda-callback_func.Tpo .deps/tilda-callback_func.Po
+i486-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..   -DDATADIR='"/usr/share"' -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs -MT tilda-key_grabber.o -MD -MP -MF .deps/tilda-key_grabber.Tpo -c -o tilda-key_grabber.o `test -f 'key_grabber.c' || echo './'`key_grabber.c
+key_grabber.c: In function ‘pull_state’:
+key_grabber.c:111: warning: unused variable ‘h’
+key_grabber.c:111: warning: unused variable ‘w’
+key_grabber.c: At top level:
+key_grabber.c:38: warning: ‘win’ defined but not used
+key_grabber.c:39: warning: ‘termwin’ defined but not used
+key_grabber.c:40: warning: ‘last_focused’ defined but not used
+i486-linux-gnu-gcc: -z: linker input file unused because linking not done
+i486-linux-gnu-gcc: defs: linker input file unused because linking not done
+mv -f .deps/tilda-key_grabber.Tpo .deps/tilda-key_grabber.Po
+i486-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..   -DDATADIR='"/usr/share"' -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs -MT tilda-load_tilda.o -MD -MP -MF .deps/tilda-load_tilda.Tpo -c -o tilda-load_tilda.o `test -f 'load_tilda.c' || echo './'`load_tilda.c
+load_tilda.c: In function ‘update_tilda’:
+load_tilda.c:227: warning: implicit declaration of function ‘find_centering_coordinate’
+load_tilda.c:65: warning: unused variable ‘scroll_on_keystroke’
+load_tilda.c:65: warning: unused variable ‘scroll_on_output’
+load_tilda.c:65: warning: unused variable ‘blink’
+load_tilda.c:65: warning: unused variable ‘audible’
+load_tilda.c:64: warning: unused variable ‘allow_bold’
+load_tilda.c:63: warning: unused variable ‘scroll_background’
+load_tilda.c:82: warning: ‘black.pixel’ is used uninitialized in this function
+i486-linux-gnu-gcc: -z: linker input file unused because linking not done
+i486-linux-gnu-gcc: defs: linker input file unused because linking not done
+mv -f .deps/tilda-load_tilda.Tpo .deps/tilda-load_tilda.Po
+i486-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..   -DDATADIR='"/usr/share"' -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs -MT tilda-tilda.o -MD -MP -MF .deps/tilda-tilda.Tpo -c -o tilda-tilda.o `test -f 'tilda.c' || echo './'`tilda.c
+tilda.c: In function ‘getinstance’:
+tilda.c:171: warning: implicit declaration of function ‘g_creat’
+tilda.c: In function ‘clean_tmp’:
+tilda.c:299: warning: implicit declaration of function ‘g_remove’
+tilda.c: In function ‘get_display_dimension’:
+tilda.c:475: warning: ‘return’ with no value, in function returning non-void
+i486-linux-gnu-gcc: -z: linker input file unused because linking not done
+i486-linux-gnu-gcc: defs: linker input file unused because linking not done
+mv -f .deps/tilda-tilda.Tpo .deps/tilda-tilda.Po
+i486-linux-gnu-gcc -pthread -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12   -Wall -g -O2 -Wl,-z,defs   -o tilda  tilda-tilda_window.o tilda-tilda_terminal.o tilda-wizard.o tilda-callback_func.o tilda-key_grabber.o tilda-load_tilda.o tilda-tilda.o -pthread -lgthread-2.0 -lvte -lncurses -lXft -lgtk-x11-2.0 -lpangoxft-1.0 -lpangox-1.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXfixes -lcairo -lX11 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0 -lconfuse   
+make[3]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4/src'
+make[3]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[2]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[1]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4'
+touch build-stamp
+ fakeroot debian/rules binary
+dh_testdir
+dh_testroot
+dh_clean -k 
+	rm -f debian/tilda.substvars
+	rm -f debian/tilda.*.debhelper
+	rm -rf debian/tilda
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o -name core -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+dh_installdirs
+	install -d debian/tilda
+/usr/bin/make install DESTDIR=/home/davide/debian/debian-source/tilda-0.09.4/debian/tilda
+make[1]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4'
+Making install in src
+make[2]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4/src'
+make[3]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4/src'
+test -z "/usr/bin" || /bin/mkdir -p "/home/davide/debian/debian-source/tilda-0.09.4/debian/tilda/usr/bin"
+  /usr/bin/install -c 'tilda' '/home/davide/debian/debian-source/tilda-0.09.4/debian/tilda/usr/bin/tilda'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4/src'
+make[2]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4/src'
+make[2]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[3]: Entering directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/applications" || /bin/mkdir -p "/home/davide/debian/debian-source/tilda-0.09.4/debian/tilda/usr/share/applications"
+ /usr/bin/install -c -m 644 'tilda.desktop' '/home/davide/debian/debian-source/tilda-0.09.4/debian/tilda/usr/share/applications/tilda.desktop'
+test -z "/usr/share/pixmaps" || /bin/mkdir -p "/home/davide/debian/debian-source/tilda-0.09.4/debian/tilda/usr/share/pixmaps"
+ /usr/bin/install -c -m 644 'tilda.png' '/home/davide/debian/debian-source/tilda-0.09.4/debian/tilda/usr/share/pixmaps/tilda.png'
+make[3]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[2]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4'
+make[1]: Leaving directory `/home/davide/debian/debian-source/tilda-0.09.4'
+dh_testdir
+dh_testroot
+dh_installchangelogs ChangeLog
+	install -d debian/tilda/usr/share/doc/tilda
+	install -o 0 -g 0 -p -m644 debian/changelog debian/tilda/usr/share/doc/tilda/changelog.Debian
+	install -o 0 -g 0 -p -m644 ChangeLog debian/tilda/usr/share/doc/tilda/changelog
+dh_installdocs
+	cp -a NEWS debian/tilda/usr/share/doc/tilda
+	cp -a README debian/tilda/usr/share/doc/tilda
+	cp -a TODO debian/tilda/usr/share/doc/tilda
+	chown -R 0:0 debian/tilda/usr/share/doc
+	chmod -R go=rX debian/tilda/usr/share/doc
+	chmod -R u\+rw debian/tilda/usr/share/doc
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/tilda/usr/share/doc/tilda/copyright
+dh_installexamples
+dh_installmenu
+	install -d debian/tilda/usr/share/menu
+	install -p -m644 debian/menu debian/tilda/usr/share/menu/tilda
+	echo "# Automatically added by dh_installmenu">> debian/tilda.postinst.debhelper
+	sed "" /usr/share/debhelper/autoscripts/postinst-menu >> debian/tilda.postinst.debhelper
+	echo '# End automatically added section' >> debian/tilda.postinst.debhelper
+	echo "# Automatically added by dh_installmenu">> debian/tilda.postrm.debhelper
+	sed "" /usr/share/debhelper/autoscripts/postrm-menu >> debian/tilda.postrm.debhelper
+	echo '# End automatically added section' >> debian/tilda.postrm.debhelper
+dh_installman debian/tilda.1
+	install -d debian/tilda/usr/share/man/man1/
+	install -p -m644 debian/tilda.1 debian/tilda/usr/share/man/man1/tilda.1
+dh_link
+dh_strip
+	strip --remove-section=.comment --remove-section=.note debian/tilda/usr/bin/tilda
+dh_compress
+	cd debian/tilda
+	chmod a-x usr/share/man/man1/tilda.1 usr/share/doc/tilda/changelog.Debian usr/share/doc/tilda/changelog usr/share/doc/tilda/NEWS
+	gzip -9f usr/share/man/man1/tilda.1 usr/share/doc/tilda/changelog.Debian usr/share/doc/tilda/changelog usr/share/doc/tilda/NEWS
+	cd '/home/davide/debian/debian-source/tilda-0.09.4'
+dh_fixperms
+	find debian/tilda  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/tilda ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/tilda/usr/share/doc -type f  ! -regex 'debian/tilda/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tilda/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/tilda/usr/share/man debian/tilda/usr/man/ debian/tilda/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tilda -perm -5 -type f \( -name '*.so*' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tilda/usr/include  -type f -name '*.h'  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/tilda/usr/lib/perl5 debian/tilda/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/tilda/usr/bin -type f  -print0 2>/dev/null | xargs -0r chmod +x
+dh_installdeb
+	install -o 0 -g 0 -d debian/tilda/DEBIAN
+	printf '#!/bin/sh
+set -e
+' > debian/tilda/DEBIAN/postinst
+	cat debian/tilda.postinst.debhelper >> debian/tilda/DEBIAN/postinst
+	chown 0:0 debian/tilda/DEBIAN/postinst
+	chmod 755 debian/tilda/DEBIAN/postinst
+	printf '#!/bin/sh
+set -e
+' > debian/tilda/DEBIAN/postrm
+	cat debian/tilda.postrm.debhelper >> debian/tilda/DEBIAN/postrm
+	chown 0:0 debian/tilda/DEBIAN/postrm
+	chmod 755 debian/tilda/DEBIAN/postrm
+dh_shlibdeps
+	dpkg-shlibdeps -Tdebian/tilda.substvars debian/tilda/usr/bin/tilda
+dh_gencontrol
+	dpkg-gencontrol -ldebian/changelog -isp -Tdebian/tilda.substvars -Pdebian/tilda
+	chmod 644 debian/tilda/DEBIAN/control
+	chown 0:0 debian/tilda/DEBIAN/control
+dh_md5sums
+	(cd debian/tilda >/dev/null ; find . -type f  ! -regex '.*/DEBIAN/.*' -printf '%P\0' | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/tilda/DEBIAN/md5sums
+	chown 0:0 debian/tilda/DEBIAN/md5sums
+dh_builddeb
+	dpkg-deb --build debian/tilda ..
+dpkg-deb: costruisco il pacchetto `tilda' in `../tilda_0.09.4-1_i386.deb'.
+ dpkg-genchanges
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage (debuild emulation): full upload (original source is included)
+Now running lintian...
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile tilda_0.09.4-1.dsc Davide Truffa <davide@catoblepa.org>
+
+ signfile tilda_0.09.4-1_i386.changes Davide Truffa <davide@catoblepa.org>
+
+Successfully signed dsc and changes files

@@ -1,0 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.7
+Date: Sat, 14 Apr 2007 14:24:56 +0200
+Source: tilda
+Binary: tilda
+Architecture: source i386
+Version: 0.09.4-1
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ tilda      - terminal with first person shooter console likeness
+Changes: 
+ tilda (0.09.4-1) unstable; urgency=low
+ .
+   * New upstream release.
+Files: 
+ dc1235cc547cea4a070a8e86bf824b5a 641 x11 optional tilda_0.09.4-1.dsc
+ 773d47e3985f7e778b662a38b053c1df 125710 x11 optional tilda_0.09.4.orig.tar.gz
+ 955a6adb1dacdb252ca3b22a9b66fdcd 24718 x11 optional tilda_0.09.4-1.diff.gz
+ e09cf96f9a2a4cf48a6a0a4384ef63d7 38162 x11 optional tilda_0.09.4-1_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFGI/qIAIz/pxUagfgRAvAQAJ4rCoUnDxTvFQM9B7GYDM8+JMqIXQCfVBUY
+G51syczW7ILjRjPiDhOaI+Q=
+=aPCj
+-----END PGP SIGNATURE-----

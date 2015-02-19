@@ -1,0 +1,831 @@
+dpkg-buildpackage: source package is fbpanel
+dpkg-buildpackage: source version is 4.9-2
+dpkg-buildpackage: source changed by Davide Truffa <davide@catoblepa.org>
+dpkg-buildpackage: source version without epoch 4.9-2
+ fakeroot debian/rules clean
+dh_testdir
+dh_testroot
+rm -f build-stamp 
+/usr/bin/make distclean
+make[1]: Entering directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9'
+make[2]: Entering directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/config'
+rm -f default pager *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/config'
+make[2]: Entering directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/man'
+rm -f fbpanel.1.gz *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/man'
+make[2]: Entering directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/systray'
+rm -f tray.so *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/systray'
+make[2]: Entering directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/plugins'
+rm -f  *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9/plugins'
+rm -f fbpanel *~ *.o *.so *.dep *.a
+rm -f Makefile.config config.h
+make[1]: Leaving directory `/home/davide/debian_dev/fbpanel/fbpanel-4.9'
+rm -f config.sub config.guess
+dh_clean 
+	rm -f debian/fbpanel.substvars
+	rm -f debian/fbpanel.*.debhelper
+	rm -rf debian/fbpanel
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o -name core -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+dpatch deapply-all
+04_genmon-plugin not applied to ./ .
+03_net-wm-state not applied to ./ .
+02_man-page not applied to ./ .
+01_non-standard_makefile not applied to ./ .
+rm -rf patch-stamp debian/patched
+ dpkg-source -b fbpanel-4.9
+dpkg-source: building fbpanel using existing fbpanel_4.9.orig.tar.gz
+dpkg-source: building fbpanel in fbpanel_4.9-2.diff.gz
+dpkg-source: warning: executable mode 0755 of 'debian/patches/03_net-wm-state.dpatch' will not be represented in diff
+dpkg-source: warning: executable mode 0755 of 'debian/patches/01_non-standard_makefile.dpatch' will not be represented in diff
+dpkg-source: warning: executable mode 0755 of 'debian/patches/02_man-page.dpatch' will not be represented in diff
+dpkg-source: warning: executable mode 0755 of 'debian/patches/04_genmon-plugin.dpatch' will not be represented in diff
+dpkg-source: building fbpanel in fbpanel_4.9-2.dsc
+ dpkg-genchanges -S -sa
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage: source only upload (original source is included)
+I: using fakeroot in build.
+Current time: Thu Jul 12 10:11:44 CEST 2007
+pbuilder-time-stamp: 1184227904
+Building the build Environment
+ -> extracting base tarball [/var/cache/pbuilder/base.tgz]
+ -> creating local configuration
+ -> copying local configuration
+ -> mounting /proc filesystem
+ -> mounting /dev/pts filesystem
+ -> policy-rc.d already exists
+Obtaining the cached apt archive contents
+Installing the build-deps
+ -> Attempting to parse the build-deps 
+ -> Considering build-dep debhelper (>= 5)
+   -> Trying debhelper
+ -> Considering build-dep autotools-dev
+   -> Trying autotools-dev
+ -> Considering build-dep dpatch
+   -> Trying dpatch
+ -> Considering build-dep libgtk2.0-dev
+   -> Trying libgtk2.0-dev
+ -> Considering build-dep libxmu-dev
+   -> Trying libxmu-dev
+ -> Considering build-dep libxpm-dev
+   -> Trying libxpm-dev
+ -> Installing  debhelper autotools-dev dpatch libgtk2.0-dev libxmu-dev libxpm-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  defoma file fontconfig fontconfig-config gettext gettext-base html2text
+  intltool-debian libatk1.0-0 libatk1.0-dev libcairo2 libcairo2-dev libcupsys2
+  libdatrie0 libexpat1 libexpat1-dev libfontconfig1 libfontconfig1-dev
+  libfreetype6 libfreetype6-dev libglib2.0-0 libglib2.0-dev libgtk2.0-0
+  libgtk2.0-common libice-dev libice6 libjpeg62 libmagic1 libpango1.0-0
+  libpango1.0-common libpango1.0-dev libpng12-0 libpng12-dev libsm-dev libsm6
+  libthai-data libthai0 libtiff4 libx11-6 libx11-data libx11-dev libxau-dev
+  libxau6 libxcursor-dev libxcursor1 libxdmcp-dev libxdmcp6 libxext-dev
+  libxext6 libxfixes-dev libxfixes3 libxft-dev libxft2 libxi-dev libxi6
+  libxinerama-dev libxinerama1 libxmu-headers libxmu6 libxpm4 libxrandr-dev
+  libxrandr2 libxrender-dev libxrender1 libxt-dev libxt6 pkg-config po-debconf
+  ttf-dejavu ucf x11-common x11proto-core-dev x11proto-fixes-dev
+  x11proto-input-dev x11proto-kb-dev x11proto-randr-dev x11proto-render-dev
+  x11proto-xext-dev x11proto-xinerama-dev xtrans-dev zlib1g-dev
+Suggested packages:
+  dh-make defoma-doc psfontmgr x-ttcidfont-conf dfontmgr curl cvs gettext-doc
+  libcairo2-doc cupsys-common libglib2.0-doc libgtk2.0-doc ttf-kochi-gothic
+  ttf-kochi-mincho ttf-thryomanes ttf-baekmuk ttf-arphic-gbsn00lp
+  ttf-arphic-bsmi00lp ttf-arphic-gkai00mp ttf-arphic-bkai00mp libpango1.0-doc
+  imagemagick
+Recommended packages:
+  libft-perl fakeroot patchutils libatk1.0-data libglib2.0-data
+  hicolor-icon-theme libgtk2.0-bin libmail-sendmail-perl libcompress-zlib-perl
+  debconf-utils
+The following NEW packages will be installed:
+  autotools-dev debhelper defoma dpatch file fontconfig fontconfig-config
+  gettext gettext-base html2text intltool-debian libatk1.0-0 libatk1.0-dev
+  libcairo2 libcairo2-dev libcupsys2 libdatrie0 libexpat1 libexpat1-dev
+  libfontconfig1 libfontconfig1-dev libfreetype6 libfreetype6-dev libglib2.0-0
+  libglib2.0-dev libgtk2.0-0 libgtk2.0-common libgtk2.0-dev libice-dev libice6
+  libjpeg62 libmagic1 libpango1.0-0 libpango1.0-common libpango1.0-dev
+  libpng12-0 libpng12-dev libsm-dev libsm6 libthai-data libthai0 libtiff4
+  libx11-6 libx11-data libx11-dev libxau-dev libxau6 libxcursor-dev
+  libxcursor1 libxdmcp-dev libxdmcp6 libxext-dev libxext6 libxfixes-dev
+  libxfixes3 libxft-dev libxft2 libxi-dev libxi6 libxinerama-dev libxinerama1
+  libxmu-dev libxmu-headers libxmu6 libxpm-dev libxpm4 libxrandr-dev
+  libxrandr2 libxrender-dev libxrender1 libxt-dev libxt6 pkg-config po-debconf
+  ttf-dejavu ucf x11-common x11proto-core-dev x11proto-fixes-dev
+  x11proto-input-dev x11proto-kb-dev x11proto-randr-dev x11proto-render-dev
+  x11proto-xext-dev x11proto-xinerama-dev xtrans-dev zlib1g-dev
+Extracting templates from packages: 34%Extracting templates from packages: 68%Extracting templates from packages: 100%
+Preconfiguring packages ...
+0 upgraded, 87 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0B/27.7MB of archives.
+After unpacking 83.7MB of additional disk space will be used.
+Selecting previously deselected package x11-common.
+(Reading database ... 10851 files and directories currently installed.)
+Unpacking x11-common (from .../x11-common_1%3a7.2-5_i386.deb) ...
+Selecting previously deselected package libice6.
+Unpacking libice6 (from .../libice6_1%3a1.0.3-2_i386.deb) ...
+Setting up x11-common (1:7.2-5) ...
+
+Selecting previously deselected package x11proto-core-dev.
+(Reading database ... 10888 files and directories currently installed.)
+Unpacking x11proto-core-dev (from .../x11proto-core-dev_7.0.10-2_all.deb) ...
+Selecting previously deselected package libice-dev.
+Unpacking libice-dev (from .../libice-dev_1%3a1.0.3-2_i386.deb) ...
+Selecting previously deselected package libsm6.
+Unpacking libsm6 (from .../libsm6_2%3a1.0.3-1+b1_i386.deb) ...
+Selecting previously deselected package libsm-dev.
+Unpacking libsm-dev (from .../libsm-dev_2%3a1.0.3-1+b1_i386.deb) ...
+Selecting previously deselected package libxau6.
+Unpacking libxau6 (from .../libxau6_1%3a1.0.3-2_i386.deb) ...
+Selecting previously deselected package libxdmcp6.
+Unpacking libxdmcp6 (from .../libxdmcp6_1%3a1.0.2-2_i386.deb) ...
+Selecting previously deselected package libx11-data.
+Unpacking libx11-data (from .../libx11-data_2%3a1.0.3-7_all.deb) ...
+Selecting previously deselected package libx11-6.
+Unpacking libx11-6 (from .../libx11-6_2%3a1.0.3-7_i386.deb) ...
+Selecting previously deselected package libxau-dev.
+Unpacking libxau-dev (from .../libxau-dev_1%3a1.0.3-2_i386.deb) ...
+Selecting previously deselected package libxdmcp-dev.
+Unpacking libxdmcp-dev (from .../libxdmcp-dev_1%3a1.0.2-2_i386.deb) ...
+Selecting previously deselected package libxext6.
+Unpacking libxext6 (from .../libxext6_1%3a1.0.3-2_i386.deb) ...
+Selecting previously deselected package x11proto-input-dev.
+Unpacking x11proto-input-dev (from .../x11proto-input-dev_1.4.2-1_all.deb) ...
+Selecting previously deselected package x11proto-xext-dev.
+Unpacking x11proto-xext-dev (from .../x11proto-xext-dev_7.0.2-5_all.deb) ...
+Selecting previously deselected package libxext-dev.
+Unpacking libxext-dev (from .../libxext-dev_1%3a1.0.3-2_i386.deb) ...
+Selecting previously deselected package x11proto-kb-dev.
+Unpacking x11proto-kb-dev (from .../x11proto-kb-dev_1.0.3-2_all.deb) ...
+Selecting previously deselected package xtrans-dev.
+Unpacking xtrans-dev (from .../xtrans-dev_1.0.3-2_all.deb) ...
+Selecting previously deselected package libx11-dev.
+Unpacking libx11-dev (from .../libx11-dev_2%3a1.0.3-7_i386.deb) ...
+Selecting previously deselected package libxfixes3.
+Unpacking libxfixes3 (from .../libxfixes3_1%3a4.0.3-2_i386.deb) ...
+Selecting previously deselected package libxrender1.
+Unpacking libxrender1 (from .../libxrender1_1%3a0.9.2-1_i386.deb) ...
+Selecting previously deselected package libxcursor1.
+Unpacking libxcursor1 (from .../libxcursor1_1%3a1.1.8-2_i386.deb) ...
+Selecting previously deselected package x11proto-render-dev.
+Unpacking x11proto-render-dev (from .../x11proto-render-dev_2%3a0.9.2-4_all.deb) ...
+Selecting previously deselected package libxrender-dev.
+Unpacking libxrender-dev (from .../libxrender-dev_1%3a0.9.2-1_i386.deb) ...
+Selecting previously deselected package x11proto-fixes-dev.
+Unpacking x11proto-fixes-dev (from .../x11proto-fixes-dev_4.0-2_all.deb) ...
+Selecting previously deselected package libxfixes-dev.
+Unpacking libxfixes-dev (from .../libxfixes-dev_1%3a4.0.3-2_i386.deb) ...
+Selecting previously deselected package libxcursor-dev.
+Unpacking libxcursor-dev (from .../libxcursor-dev_1%3a1.1.8-2_i386.deb) ...
+Selecting previously deselected package libexpat1.
+Unpacking libexpat1 (from .../libexpat1_1.95.8-3.4_i386.deb) ...
+Selecting previously deselected package libfreetype6.
+Unpacking libfreetype6 (from .../libfreetype6_2.3.5-1_i386.deb) ...
+Selecting previously deselected package ucf.
+Unpacking ucf (from .../apt/archives/ucf_3.001_all.deb) ...
+Moving old data out of the way
+Selecting previously deselected package libmagic1.
+Unpacking libmagic1 (from .../libmagic1_4.21-1_i386.deb) ...
+Selecting previously deselected package file.
+Unpacking file (from .../archives/file_4.21-1_i386.deb) ...
+Selecting previously deselected package defoma.
+Unpacking defoma (from .../defoma_0.11.10-0.1_all.deb) ...
+Selecting previously deselected package ttf-dejavu.
+Unpacking ttf-dejavu (from .../ttf-dejavu_2.18-1_all.deb) ...
+Selecting previously deselected package fontconfig-config.
+Unpacking fontconfig-config (from .../fontconfig-config_2.4.2-1.2_all.deb) ...
+Selecting previously deselected package libfontconfig1.
+Unpacking libfontconfig1 (from .../libfontconfig1_2.4.2-1.2_i386.deb) ...
+Selecting previously deselected package libxft2.
+Unpacking libxft2 (from .../libxft2_2.1.12-2_i386.deb) ...
+Selecting previously deselected package libexpat1-dev.
+Unpacking libexpat1-dev (from .../libexpat1-dev_1.95.8-3.4_i386.deb) ...
+Selecting previously deselected package zlib1g-dev.
+Unpacking zlib1g-dev (from .../zlib1g-dev_1%3a1.2.3.3.dfsg-5_i386.deb) ...
+Selecting previously deselected package libfreetype6-dev.
+Unpacking libfreetype6-dev (from .../libfreetype6-dev_2.3.5-1_i386.deb) ...
+Selecting previously deselected package libglib2.0-0.
+Unpacking libglib2.0-0 (from .../libglib2.0-0_2.12.12-1+b1_i386.deb) ...
+Selecting previously deselected package pkg-config.
+Unpacking pkg-config (from .../pkg-config_0.22-1_i386.deb) ...
+Selecting previously deselected package libfontconfig1-dev.
+Unpacking libfontconfig1-dev (from .../libfontconfig1-dev_2.4.2-1.2_i386.deb) ...
+Selecting previously deselected package libxft-dev.
+Unpacking libxft-dev (from .../libxft-dev_2.1.12-2_i386.deb) ...
+Selecting previously deselected package libxi6.
+Unpacking libxi6 (from .../libxi6_2%3a1.1.1-1_i386.deb) ...
+Selecting previously deselected package libxi-dev.
+Unpacking libxi-dev (from .../libxi-dev_2%3a1.1.1-1_i386.deb) ...
+Selecting previously deselected package libxinerama1.
+Unpacking libxinerama1 (from .../libxinerama1_1%3a1.0.2-1_i386.deb) ...
+Selecting previously deselected package x11proto-xinerama-dev.
+Unpacking x11proto-xinerama-dev (from .../x11proto-xinerama-dev_1.1.2-4_all.deb) ...
+Selecting previously deselected package libxinerama-dev.
+Unpacking libxinerama-dev (from .../libxinerama-dev_1%3a1.0.2-1_i386.deb) ...
+Selecting previously deselected package libxmu-headers.
+Unpacking libxmu-headers (from .../libxmu-headers_1%3a1.0.3-1_all.deb) ...
+Selecting previously deselected package libxpm4.
+Unpacking libxpm4 (from .../libxpm4_1%3a3.5.6-3_i386.deb) ...
+Selecting previously deselected package libxpm-dev.
+Unpacking libxpm-dev (from .../libxpm-dev_1%3a3.5.6-3_i386.deb) ...
+Selecting previously deselected package libxrandr2.
+Unpacking libxrandr2 (from .../libxrandr2_2%3a1.2.1-1_i386.deb) ...
+Selecting previously deselected package x11proto-randr-dev.
+Unpacking x11proto-randr-dev (from .../x11proto-randr-dev_1.2.1-2_all.deb) ...
+Selecting previously deselected package libxrandr-dev.
+Unpacking libxrandr-dev (from .../libxrandr-dev_2%3a1.2.1-1_i386.deb) ...
+Selecting previously deselected package libxt6.
+Unpacking libxt6 (from .../libxt6_1%3a1.0.5-3_i386.deb) ...
+Selecting previously deselected package libxt-dev.
+Unpacking libxt-dev (from .../libxt-dev_1%3a1.0.5-3_i386.deb) ...
+Selecting previously deselected package gettext-base.
+Unpacking gettext-base (from .../gettext-base_0.16.1-2_i386.deb) ...
+Selecting previously deselected package autotools-dev.
+Unpacking autotools-dev (from .../autotools-dev_20070306.1_all.deb) ...
+Selecting previously deselected package html2text.
+Unpacking html2text (from .../html2text_1.3.2a-3_i386.deb) ...
+Selecting previously deselected package gettext.
+Unpacking gettext (from .../gettext_0.16.1-2_i386.deb) ...
+Selecting previously deselected package intltool-debian.
+Unpacking intltool-debian (from .../intltool-debian_0.35.0+20060710.1_all.deb) ...
+Selecting previously deselected package po-debconf.
+Unpacking po-debconf (from .../po-debconf_1.0.9_all.deb) ...
+Selecting previously deselected package debhelper.
+Unpacking debhelper (from .../debhelper_5.0.52_all.deb) ...
+Selecting previously deselected package dpatch.
+Unpacking dpatch (from .../archives/dpatch_2.0.26_all.deb) ...
+Selecting previously deselected package fontconfig.
+Unpacking fontconfig (from .../fontconfig_2.4.2-1.2_i386.deb) ...
+Selecting previously deselected package libatk1.0-0.
+Unpacking libatk1.0-0 (from .../libatk1.0-0_1.18.0-2_i386.deb) ...
+Selecting previously deselected package libglib2.0-dev.
+Unpacking libglib2.0-dev (from .../libglib2.0-dev_2.12.12-1+b1_i386.deb) ...
+Selecting previously deselected package libatk1.0-dev.
+Unpacking libatk1.0-dev (from .../libatk1.0-dev_1.18.0-2_i386.deb) ...
+Selecting previously deselected package libpng12-0.
+Unpacking libpng12-0 (from .../libpng12-0_1.2.15~beta5-2_i386.deb) ...
+Selecting previously deselected package libcairo2.
+Unpacking libcairo2 (from .../libcairo2_1.4.10-1_i386.deb) ...
+Selecting previously deselected package libpng12-dev.
+Unpacking libpng12-dev (from .../libpng12-dev_1.2.15~beta5-2_i386.deb) ...
+Selecting previously deselected package libcairo2-dev.
+Unpacking libcairo2-dev (from .../libcairo2-dev_1.4.10-1_i386.deb) ...
+Selecting previously deselected package libcupsys2.
+Unpacking libcupsys2 (from .../libcupsys2_1.2.11-3_i386.deb) ...
+Selecting previously deselected package libdatrie0.
+Unpacking libdatrie0 (from .../libdatrie0_0.1.1-4_i386.deb) ...
+Selecting previously deselected package libgtk2.0-common.
+Unpacking libgtk2.0-common (from .../libgtk2.0-common_2.10.13-1_all.deb) ...
+Selecting previously deselected package libjpeg62.
+Unpacking libjpeg62 (from .../libjpeg62_6b-13_i386.deb) ...
+Selecting previously deselected package libpango1.0-common.
+Unpacking libpango1.0-common (from .../libpango1.0-common_1.16.4-2_all.deb) ...
+Selecting previously deselected package libthai-data.
+Unpacking libthai-data (from .../libthai-data_0.1.8-3_all.deb) ...
+Selecting previously deselected package libthai0.
+Unpacking libthai0 (from .../libthai0_0.1.8-3_i386.deb) ...
+Selecting previously deselected package libpango1.0-0.
+Unpacking libpango1.0-0 (from .../libpango1.0-0_1.16.4-2_i386.deb) ...
+Selecting previously deselected package libtiff4.
+Unpacking libtiff4 (from .../libtiff4_3.8.2-7_i386.deb) ...
+Selecting previously deselected package libgtk2.0-0.
+Unpacking libgtk2.0-0 (from .../libgtk2.0-0_2.10.13-1_i386.deb) ...
+Selecting previously deselected package libpango1.0-dev.
+Unpacking libpango1.0-dev (from .../libpango1.0-dev_1.16.4-2_i386.deb) ...
+Selecting previously deselected package libgtk2.0-dev.
+Unpacking libgtk2.0-dev (from .../libgtk2.0-dev_2.10.13-1_i386.deb) ...
+Selecting previously deselected package libxmu6.
+Unpacking libxmu6 (from .../libxmu6_1%3a1.0.3-1_i386.deb) ...
+Selecting previously deselected package libxmu-dev.
+Unpacking libxmu-dev (from .../libxmu-dev_1%3a1.0.3-1_i386.deb) ...
+Setting up libice6 (1:1.0.3-2) ...
+
+Setting up x11proto-core-dev (7.0.10-2) ...
+Setting up libice-dev (1:1.0.3-2) ...
+Setting up libsm6 (2:1.0.3-1+b1) ...
+
+Setting up libsm-dev (2:1.0.3-1+b1) ...
+Setting up libxau6 (1:1.0.3-2) ...
+
+Setting up libxdmcp6 (1:1.0.2-2) ...
+
+Setting up libx11-data (2:1.0.3-7) ...
+Setting up libx11-6 (2:1.0.3-7) ...
+
+Setting up libxau-dev (1:1.0.3-2) ...
+Setting up libxdmcp-dev (1:1.0.2-2) ...
+Setting up libxext6 (1:1.0.3-2) ...
+
+Setting up x11proto-input-dev (1.4.2-1) ...
+Setting up x11proto-xext-dev (7.0.2-5) ...
+Setting up x11proto-kb-dev (1.0.3-2) ...
+Setting up xtrans-dev (1.0.3-2) ...
+Setting up libxfixes3 (1:4.0.3-2) ...
+
+Setting up libxrender1 (1:0.9.2-1) ...
+
+Setting up libxcursor1 (1:1.1.8-2) ...
+
+Setting up x11proto-render-dev (2:0.9.2-4) ...
+Setting up x11proto-fixes-dev (4.0-2) ...
+Setting up libexpat1 (1.95.8-3.4) ...
+
+Setting up libfreetype6 (2.3.5-1) ...
+
+Setting up ucf (3.001) ...
+
+Setting up libmagic1 (4.21-1) ...
+
+Setting up file (4.21-1) ...
+Setting up defoma (0.11.10-0.1) ...
+
+Setting up ttf-dejavu (2.18-1) ...
+
+Setting up fontconfig-config (2.4.2-1.2) ...
+
+Setting up libfontconfig1 (2.4.2-1.2) ...
+
+Setting up libxft2 (2.1.12-2) ...
+
+Setting up libexpat1-dev (1.95.8-3.4) ...
+
+Setting up zlib1g-dev (1:1.2.3.3.dfsg-5) ...
+Setting up libfreetype6-dev (2.3.5-1) ...
+
+Setting up libglib2.0-0 (2.12.12-1+b1) ...
+
+Setting up pkg-config (0.22-1) ...
+Setting up libfontconfig1-dev (2.4.2-1.2) ...
+Setting up libxi6 (2:1.1.1-1) ...
+
+Setting up libxinerama1 (1:1.0.2-1) ...
+
+Setting up x11proto-xinerama-dev (1.1.2-4) ...
+Setting up libxpm4 (1:3.5.6-3) ...
+
+Setting up libxrandr2 (2:1.2.1-1) ...
+
+Setting up x11proto-randr-dev (1.2.1-2) ...
+Setting up libxt6 (1:1.0.5-3) ...
+
+Setting up gettext-base (0.16.1-2) ...
+
+Setting up autotools-dev (20070306.1) ...
+Setting up html2text (1.3.2a-3) ...
+
+Setting up gettext (0.16.1-2) ...
+
+Setting up intltool-debian (0.35.0+20060710.1) ...
+Setting up po-debconf (1.0.9) ...
+Setting up debhelper (5.0.52) ...
+Setting up dpatch (2.0.26) ...
+Setting up fontconfig (2.4.2-1.2) ...
+Updating font configuration of fontconfig...
+Cleaning up category cid..
+Cleaning up category truetype..
+Cleaning up category type1..
+Updating category type1..
+Updating category truetype..
+Updating category cid..
+Cleaning up old fontconfig caches... done.
+Regenerating fonts cache... done.
+
+Setting up libatk1.0-0 (1.18.0-2) ...
+
+Setting up libglib2.0-dev (2.12.12-1+b1) ...
+Setting up libatk1.0-dev (1.18.0-2) ...
+Setting up libpng12-0 (1.2.15~beta5-2) ...
+
+Setting up libcairo2 (1.4.10-1) ...
+
+Setting up libpng12-dev (1.2.15~beta5-2) ...
+Setting up libcupsys2 (1.2.11-3) ...
+
+Setting up libdatrie0 (0.1.1-4) ...
+
+Setting up libgtk2.0-common (2.10.13-1) ...
+Setting up libjpeg62 (6b-13) ...
+
+Setting up libpango1.0-common (1.16.4-2) ...
+I: Purging /etc/pango/pango.modules
+Cleaning up font configuration of pango...
+Updating font configuration of pango...
+Cleaning up category xfont..
+Updating category xfont..
+*** You don't have any defomized font packages.
+*** So we are trying to force to generate pangox.aliases...
+
+Setting up libthai-data (0.1.8-3) ...
+Setting up libthai0 (0.1.8-3) ...
+
+Setting up libpango1.0-0 (1.16.4-2) ...
+
+Setting up libtiff4 (3.8.2-7) ...
+
+Setting up libgtk2.0-0 (2.10.13-1) ...
+Removing generated module files coming from the previous Gtk binary version...
+
+Setting up libxmu6 (1:1.0.3-1) ...
+
+Setting up libxext-dev (1:1.0.3-2) ...
+Setting up libx11-dev (2:1.0.3-7) ...
+Setting up libxrender-dev (1:0.9.2-1) ...
+Setting up libxfixes-dev (1:4.0.3-2) ...
+Setting up libxcursor-dev (1:1.1.8-2) ...
+Setting up libxft-dev (2.1.12-2) ...
+Setting up libxi-dev (2:1.1.1-1) ...
+Setting up libxinerama-dev (1:1.0.2-1) ...
+Setting up libxmu-headers (1:1.0.3-1) ...
+Setting up libxpm-dev (1:3.5.6-3) ...
+Setting up libxrandr-dev (2:1.2.1-1) ...
+Setting up libxt-dev (1:1.0.5-3) ...
+Setting up libcairo2-dev (1.4.10-1) ...
+Setting up libpango1.0-dev (1.16.4-2) ...
+Setting up libgtk2.0-dev (2.10.13-1) ...
+Setting up libxmu-dev (1:1.0.3-1) ...
+ -> Finished parsing the build-deps
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  fakeroot
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0B/108kB of archives.
+After unpacking 434kB of additional disk space will be used.
+Selecting previously deselected package fakeroot.
+(Reading database ... 15158 files and directories currently installed.)
+Unpacking fakeroot (from .../fakeroot_1.7.1_i386.deb) ...
+Setting up fakeroot (1.7.1) ...
+
+Copying back the cached apt archive contents
+Copying source file
+    -> copying [../fbpanel_4.9-2.dsc]
+    -> copying [../fbpanel_4.9.orig.tar.gz]
+    -> copying [../fbpanel_4.9-2.diff.gz]
+Extracting source
+dpkg-source: warning: extracting unsigned source package (./fbpanel_4.9-2.dsc)
+dpkg-source: extracting fbpanel in fbpanel-4.9
+dpkg-source: unpacking fbpanel_4.9.orig.tar.gz
+dpkg-source: applying ./fbpanel_4.9-2.diff.gz
+ -> Building the package
+dpkg-buildpackage: source package is fbpanel
+dpkg-buildpackage: source version is 4.9-2
+dpkg-buildpackage: source changed by Davide Truffa <davide@catoblepa.org>
+dpkg-buildpackage: host architecture i386
+dpkg-buildpackage: source version without epoch 4.9-2
+ fakeroot debian/rules clean
+dh_testdir
+dh_testroot
+rm -f build-stamp 
+/usr/bin/make distclean
+make[1]: Entering directory `/tmp/buildd/fbpanel-4.9'
+make[2]: Entering directory `/tmp/buildd/fbpanel-4.9/config'
+rm -f default pager *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/tmp/buildd/fbpanel-4.9/config'
+make[2]: Entering directory `/tmp/buildd/fbpanel-4.9/man'
+rm -f fbpanel.1.gz *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/tmp/buildd/fbpanel-4.9/man'
+make[2]: Entering directory `/tmp/buildd/fbpanel-4.9/systray'
+rm -f tray.so *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/tmp/buildd/fbpanel-4.9/systray'
+make[2]: Entering directory `/tmp/buildd/fbpanel-4.9/plugins'
+rm -f  *~ *.o *.so *.dep *.a
+make[2]: Leaving directory `/tmp/buildd/fbpanel-4.9/plugins'
+rm -f fbpanel *~ *.o *.so *.dep *.a
+rm -f Makefile.config config.h
+make[1]: Leaving directory `/tmp/buildd/fbpanel-4.9'
+rm -f config.sub config.guess
+dh_clean 
+	rm -f debian/fbpanel.substvars
+	rm -f debian/fbpanel.*.debhelper
+	rm -rf debian/fbpanel
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o -name core -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+dpatch deapply-all
+04_genmon-plugin not applied to ./ .
+03_net-wm-state not applied to ./ .
+02_man-page not applied to ./ .
+01_non-standard_makefile not applied to ./ .
+rm -rf patch-stamp debian/patched
+ dpkg-source -b fbpanel-4.9
+dpkg-source: building fbpanel using existing fbpanel_4.9.orig.tar.gz
+dpkg-source: building fbpanel in fbpanel_4.9-2.diff.gz
+dpkg-source: warning: executable mode 0755 of 'debian/patches/02_man-page.dpatch' will not be represented in diff
+dpkg-source: warning: executable mode 0755 of 'debian/patches/03_net-wm-state.dpatch' will not be represented in diff
+dpkg-source: warning: executable mode 0755 of 'debian/patches/04_genmon-plugin.dpatch' will not be represented in diff
+dpkg-source: warning: executable mode 0755 of 'debian/patches/01_non-standard_makefile.dpatch' will not be represented in diff
+dpkg-source: building fbpanel in fbpanel_4.9-2.dsc
+ debian/rules build
+dpatch apply-all
+applying patch 01_non-standard_makefile to ./ ... ok.
+applying patch 02_man-page to ./ ... ok.
+applying patch 03_net-wm-state to ./ ... ok.
+applying patch 04_genmon-plugin to ./ ... ok.
+dpatch cat-all > patch-stamp
+dh_testdir
+./configure --prefix=/usr
+Installation prefix is /usr
+checking for installed devel packages
+creating config.h
+creating Makefile.config
+dh_testdir
+/usr/bin/make
+make[1]: Entering directory `/tmp/buildd/fbpanel-4.9'
+DEP  configurator.dep
+DEP  ev.dep
+DEP  gtkbgbox.dep
+DEP  bg.dep
+DEP  gtkbar.dep
+DEP  plugin.dep
+DEP  misc.dep
+DEP  panel.dep
+make[1]: Leaving directory `/tmp/buildd/fbpanel-4.9'
+make[1]: Entering directory `/tmp/buildd/fbpanel-4.9'
+TEXT config/default
+TEXT config/pager
+TEXT man/fbpanel.1.gz
+DEP  systray/main.dep
+DEP  systray/fixedtip.dep
+DEP  systray/eggtraymanager.dep
+DEP  systray/egg-marshal.dep
+CC   systray/egg-marshal.o
+CC   systray/eggtraymanager.o
+CC   systray/fixedtip.o
+CC   systray/main.o
+LD   systray/tray.so
+DEP  plugins/cpu.dep
+DEP  plugins/genmon.dep
+DEP  plugins/deskno2.dep
+DEP  plugins/deskno.dep
+DEP  plugins/icons.dep
+DEP  plugins/test.dep
+DEP  plugins/space.dep
+DEP  plugins/pager.dep
+DEP  plugins/launchbar.dep
+DEP  plugins/dclock.dep
+DEP  plugins/wincmd.dep
+DEP  plugins/taskbar.dep
+DEP  plugins/separator.dep
+DEP  plugins/menu.dep
+DEP  plugins/image.dep
+CC   plugins/image.o
+LD   plugins/image.so
+CC   plugins/menu.o
+LD   plugins/menu.so
+CC   plugins/separator.o
+LD   plugins/separator.so
+CC   plugins/taskbar.o
+LD   plugins/taskbar.so
+CC   plugins/wincmd.o
+LD   plugins/wincmd.so
+CC   plugins/dclock.o
+LD   plugins/dclock.so
+CC   plugins/launchbar.o
+LD   plugins/launchbar.so
+CC   plugins/pager.o
+LD   plugins/pager.so
+CC   plugins/space.o
+LD   plugins/space.so
+CC   plugins/test.o
+LD   plugins/test.so
+CC   plugins/icons.o
+LD   plugins/icons.so
+CC   plugins/deskno.o
+LD   plugins/deskno.so
+CC   plugins/deskno2.o
+LD   plugins/deskno2.so
+CC   plugins/genmon.o
+LD   plugins/genmon.so
+CC   plugins/cpu.o
+LD   plugins/cpu.so
+CC   panel.o
+CC   misc.o
+CC   plugin.o
+CC   gtkbar.o
+CC   bg.o
+CC   gtkbgbox.o
+CC   ev.o
+CC   configurator.o
+LD   fbpanel
+make[1]: Leaving directory `/tmp/buildd/fbpanel-4.9'
+touch build-stamp
+ fakeroot debian/rules binary
+dh_testdir
+./configure --prefix=/usr
+Installation prefix is /usr
+checking for installed devel packages
+creating config.h
+creating Makefile.config
+dh_testdir
+/usr/bin/make
+make[1]: Entering directory `/tmp/buildd/fbpanel-4.9'
+DEP  configurator.dep
+DEP  ev.dep
+DEP  bg.dep
+DEP  plugin.dep
+DEP  misc.dep
+DEP  panel.dep
+make[1]: Leaving directory `/tmp/buildd/fbpanel-4.9'
+make[1]: Entering directory `/tmp/buildd/fbpanel-4.9'
+DEP  systray/main.dep
+CC   systray/main.o
+LD   systray/tray.so
+DEP  plugins/cpu.dep
+DEP  plugins/genmon.dep
+DEP  plugins/deskno2.dep
+DEP  plugins/deskno.dep
+DEP  plugins/icons.dep
+DEP  plugins/test.dep
+DEP  plugins/space.dep
+DEP  plugins/pager.dep
+DEP  plugins/launchbar.dep
+DEP  plugins/dclock.dep
+DEP  plugins/wincmd.dep
+DEP  plugins/taskbar.dep
+DEP  plugins/separator.dep
+DEP  plugins/menu.dep
+DEP  plugins/image.dep
+CC   plugins/image.o
+LD   plugins/image.so
+CC   plugins/menu.o
+LD   plugins/menu.so
+CC   plugins/separator.o
+LD   plugins/separator.so
+CC   plugins/taskbar.o
+LD   plugins/taskbar.so
+CC   plugins/wincmd.o
+LD   plugins/wincmd.so
+CC   plugins/dclock.o
+LD   plugins/dclock.so
+CC   plugins/launchbar.o
+LD   plugins/launchbar.so
+CC   plugins/pager.o
+LD   plugins/pager.so
+CC   plugins/space.o
+LD   plugins/space.so
+CC   plugins/test.o
+LD   plugins/test.so
+CC   plugins/icons.o
+LD   plugins/icons.so
+CC   plugins/deskno.o
+LD   plugins/deskno.so
+CC   plugins/deskno2.o
+LD   plugins/deskno2.so
+CC   plugins/genmon.o
+LD   plugins/genmon.so
+CC   plugins/cpu.o
+LD   plugins/cpu.so
+CC   panel.o
+CC   misc.o
+CC   plugin.o
+CC   bg.o
+CC   ev.o
+LD   fbpanel
+make[1]: Leaving directory `/tmp/buildd/fbpanel-4.9'
+touch build-stamp
+dh_testdir
+dh_testroot
+dh_clean -k 
+	rm -f debian/fbpanel.substvars
+	rm -f debian/fbpanel.*.debhelper
+	rm -rf debian/fbpanel
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o -name core -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+dh_installdirs
+	install -d debian/fbpanel
+	install -d debian/fbpanel/usr/bin debian/fbpanel/etc/fbpanel debian/fbpanel/usr/share/fbpanel/images debian/fbpanel/usr/lib/fbpanel/plugins
+cp fbpanel debian/fbpanel/usr/bin/
+cp config/images/* debian/fbpanel/usr/share/fbpanel/images/
+mv debian/fbpanel/usr/share/fbpanel/images/gnome_terminal.svg \
+		debian/fbpanel/usr/share/fbpanel/images/gnome-terminal.svg
+cp config/default.cfg debian/fbpanel/etc/fbpanel/default
+cp plugins/*.so systray/*.so debian/fbpanel/usr/lib/fbpanel/plugins/
+dh_testdir
+dh_testroot
+dh_installchangelogs CHANGELOG
+	install -d debian/fbpanel/usr/share/doc/fbpanel
+	install -o 0 -g 0 -p -m644 debian/changelog debian/fbpanel/usr/share/doc/fbpanel/changelog.Debian
+	install -o 0 -g 0 -p -m644 CHANGELOG debian/fbpanel/usr/share/doc/fbpanel/changelog
+dh_installdocs
+	cp -a README debian/fbpanel/usr/share/doc/fbpanel
+	chown -R 0:0 debian/fbpanel/usr/share/doc
+	chmod -R go=rX debian/fbpanel/usr/share/doc
+	chmod -R u\+rw debian/fbpanel/usr/share/doc
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/fbpanel/usr/share/doc/fbpanel/copyright
+dh_installmenu
+	install -d debian/fbpanel/usr/share/menu
+	install -p -m644 debian/menu debian/fbpanel/usr/share/menu/fbpanel
+	echo "# Automatically added by dh_installmenu">> debian/fbpanel.postinst.debhelper
+	sed "" /usr/share/debhelper/autoscripts/postinst-menu >> debian/fbpanel.postinst.debhelper
+	echo '# End automatically added section' >> debian/fbpanel.postinst.debhelper
+	echo "# Automatically added by dh_installmenu">> debian/fbpanel.postrm.debhelper
+	sed "" /usr/share/debhelper/autoscripts/postrm-menu >> debian/fbpanel.postrm.debhelper
+	echo '# End automatically added section' >> debian/fbpanel.postrm.debhelper
+dh_installman man/fbpanel.1
+	install -d debian/fbpanel/usr/share/man/man1/
+	install -p -m644 man/fbpanel.1 debian/fbpanel/usr/share/man/man1/fbpanel.1
+dh_link
+dh_strip
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/separator.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/taskbar.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/test.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/dclock.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/deskno2.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/menu.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/tray.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/space.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/pager.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/deskno.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/cpu.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/genmon.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/image.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/wincmd.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/icons.so
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/fbpanel/usr/lib/fbpanel/plugins/launchbar.so
+	strip --remove-section=.comment --remove-section=.note debian/fbpanel/usr/bin/fbpanel
+dh_compress
+	cd debian/fbpanel
+	chmod a-x usr/share/man/man1/fbpanel.1 usr/share/doc/fbpanel/changelog usr/share/doc/fbpanel/changelog.Debian
+	gzip -9f usr/share/man/man1/fbpanel.1 usr/share/doc/fbpanel/changelog usr/share/doc/fbpanel/changelog.Debian
+	cd '/tmp/buildd/fbpanel-4.9'
+dh_fixperms
+	find debian/fbpanel  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/fbpanel ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/fbpanel/usr/share/doc -type f  ! -regex 'debian/fbpanel/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fbpanel/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/fbpanel/usr/share/man debian/fbpanel/usr/man/ debian/fbpanel/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fbpanel -perm -5 -type f \( -name '*.so*' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fbpanel/usr/include  -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/fbpanel/usr/lib/perl5 debian/fbpanel/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/fbpanel/usr/bin -type f  -print0 2>/dev/null | xargs -0r chmod a+x
+dh_installdeb
+	install -o 0 -g 0 -d debian/fbpanel/DEBIAN
+	printf '#!/bin/sh
+set -e
+' > debian/fbpanel/DEBIAN/postinst
+	cat debian/fbpanel.postinst.debhelper >> debian/fbpanel/DEBIAN/postinst
+	chown 0:0 debian/fbpanel/DEBIAN/postinst
+	chmod 755 debian/fbpanel/DEBIAN/postinst
+	printf '#!/bin/sh
+set -e
+' > debian/fbpanel/DEBIAN/postrm
+	cat debian/fbpanel.postrm.debhelper >> debian/fbpanel/DEBIAN/postrm
+	chown 0:0 debian/fbpanel/DEBIAN/postrm
+	chmod 755 debian/fbpanel/DEBIAN/postrm
+	find debian/fbpanel/etc -type f -printf '/etc/%P
+' >> debian/fbpanel/DEBIAN/conffiles
+	chmod 644 debian/fbpanel/DEBIAN/conffiles
+dh_shlibdeps
+	dpkg-shlibdeps -Tdebian/fbpanel.substvars debian/fbpanel/usr/bin/fbpanel debian/fbpanel/usr/lib/fbpanel/plugins/separator.so debian/fbpanel/usr/lib/fbpanel/plugins/taskbar.so debian/fbpanel/usr/lib/fbpanel/plugins/test.so debian/fbpanel/usr/lib/fbpanel/plugins/dclock.so debian/fbpanel/usr/lib/fbpanel/plugins/deskno2.so debian/fbpanel/usr/lib/fbpanel/plugins/menu.so debian/fbpanel/usr/lib/fbpanel/plugins/tray.so debian/fbpanel/usr/lib/fbpanel/plugins/space.so debian/fbpanel/usr/lib/fbpanel/plugins/pager.so debian/fbpanel/usr/lib/fbpanel/plugins/deskno.so debian/fbpanel/usr/lib/fbpanel/plugins/cpu.so debian/fbpanel/usr/lib/fbpanel/plugins/genmon.so debian/fbpanel/usr/lib/fbpanel/plugins/image.so debian/fbpanel/usr/lib/fbpanel/plugins/wincmd.so debian/fbpanel/usr/lib/fbpanel/plugins/icons.so debian/fbpanel/usr/lib/fbpanel/plugins/launchbar.so
+dh_gencontrol
+	dpkg-gencontrol -ldebian/changelog -isp -Tdebian/fbpanel.substvars -Pdebian/fbpanel
+	chmod 644 debian/fbpanel/DEBIAN/control
+	chown 0:0 debian/fbpanel/DEBIAN/control
+dh_md5sums
+	(cd debian/fbpanel >/dev/null ; find . -type f ! -path "./etc/fbpanel/default"  ! -regex '.*/DEBIAN/.*' -printf '%P\0' | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/fbpanel/DEBIAN/md5sums
+	chown 0:0 debian/fbpanel/DEBIAN/md5sums
+dh_builddeb
+	dpkg-deb --build debian/fbpanel ..
+dpkg-deb: building package `fbpanel' in `../fbpanel_4.9-2_i386.deb'.
+ dpkg-genchanges -sa
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage: full upload (original source is included)
+Copying back the cached apt archive contents
+ -> unmounting dev/pts filesystem
+ -> unmounting proc filesystem
+ -> cleaning the build env 
+    -> removing directory /var/cache/pbuilder/build//11884 and its subdirectories
+Current time: Thu Jul 12 10:13:47 CEST 2007
+pbuilder-time-stamp: 1184228027
+ signfile /var/cache/pbuilder/result//fbpanel_4.9-2.dsc 151A81F8
+gpg: WARNING: unsafe ownership on configuration file `/home/davide/.gnupg/gpg.conf'
+gpg: WARNING: unsafe ownership on configuration file `/home/davide/.gnupg/gpg.conf'
+gpg: gpg-agent is not available in this session
+
+ signfile /var/cache/pbuilder/result//fbpanel_4.9-2_i386.changes 151A81F8
+gpg: WARNING: unsafe ownership on configuration file `/home/davide/.gnupg/gpg.conf'
+gpg: WARNING: unsafe ownership on configuration file `/home/davide/.gnupg/gpg.conf'
+gpg: gpg-agent is not available in this session
+
+Successfully signed dsc and changes files

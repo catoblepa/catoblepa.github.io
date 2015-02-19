@@ -1,0 +1,701 @@
+ fakeroot debian/rules clean
+test -x debian/rules
+test "`id -u`" = 0
+for i in ./config.guess ./config.sub  ; do \
+		if test -e $i.cdbs-orig ; then \
+			mv $i.cdbs-orig $i ; \
+		fi ; \
+	done
+dh_clean 
+/usr/bin/make -C . -k distclean
+make[1]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+Making distclean in help
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/help'
+rm -rf .libs _libs
+rm -f  de/glipper.xml fr/glipper.xml it/glipper.xml	   
+rm -f de/.xml2po.mo
+rm -f fr/.xml2po.mo
+rm -f it/.xml2po.mo
+rm -f *.lo
+test -z "" || rm -f 
+rm -f Makefile
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/help'
+Making distclean in po
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/po'
+rm -f *.pox glipper.pot *.old.po cat-id-tbl.tmp
+rm -f .intltool-merge-cache
+rm -f Makefile Makefile.in POTFILES stamp-it
+rm -f *.mo *.msg *.cat *.cat.m *.gmo
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/po'
+Making distclean in data
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data'
+Making distclean in art
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f Makefile
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+Making distclean in .
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "glipper.pc" || rm -f glipper.pc
+test -z "glipper.schemas Glipper.server Glipper.server.in glipper.pc" || rm -f glipper.schemas Glipper.server Glipper.server.in glipper.pc
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data'
+rm -f Makefile
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data'
+Making distclean in glipper
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+Making distclean in plugins
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f Makefile
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+Making distclean in osutils
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+test -z "_osutils.la" || rm -f _osutils.la
+rm -f "./so_locations"
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps
+rm -f Makefile
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+Making distclean in keybinder
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+test -z "_keybinder.la" || rm -f _keybinder.la
+rm -f "./so_locations"
+test -z "_keybinder.c" || rm -f _keybinder.c
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps
+rm -f Makefile
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+Making distclean in .
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+test -z "glipper" || rm -f glipper
+rm -rf .libs _libs
+rm -f *.lo
+test -z "defs.py" || rm -f defs.py
+test -z "defs.py glipper" || rm -f defs.py glipper
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+rm -f Makefile
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+Making distclean in .
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+test -z "intltool-extract intltool-merge intltool-update gnome-doc-utils.make" || rm -f intltool-extract intltool-merge intltool-update gnome-doc-utils.make
+rm -f config.h stamp-h1
+rm -f libtool
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f Makefile
+make[1]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+rm -f debian/stamp-makefile-build
+rm -f debian/stamp-autotools-files
+ dpkg-source -b glipper-1.0
+dpkg-source: building glipper using existing glipper_1.0.orig.tar.gz
+dpkg-source: building glipper in glipper_1.0-1.diff.gz
+dpkg-source: warning: ignoring deletion of file help/it/glipper.xml
+dpkg-source: warning: ignoring deletion of file help/de/glipper.xml
+dpkg-source: warning: ignoring deletion of file help/fr/glipper.xml
+dpkg-source: warning: ignoring deletion of file glipper/defs.py
+dpkg-source: warning: ignoring deletion of file gnome-doc-utils.make
+dpkg-source: building glipper in glipper_1.0-1.dsc
+ debian/rules build
+test -x debian/rules
+mkdir -p "."
+if test -e /usr/share/misc/config.guess ; then \
+		for i in ./config.guess ; do \
+			if ! test -e $i.cdbs-orig ; then \
+				mv $i $i.cdbs-orig ; \
+				cp --remove-destination /usr/share/misc/config.guess $i ; \
+			fi ; \
+		done ; \
+	fi
+if test -e /usr/share/misc/config.sub ; then \
+		for i in ./config.sub ; do \
+			if ! test -e $i.cdbs-orig ; then \
+				mv $i $i.cdbs-orig ; \
+				cp --remove-destination /usr/share/misc/config.sub $i ; \
+			fi ; \
+		done ; \
+	fi
+touch debian/stamp-autotools-files
+chmod a+x /home/davide/debian/glipper/glipper-1.0/./configure
+cd . && CC="cc" CXX="g++" CFLAGS="-g -Wall -O2" CXXFLAGS="-g -Wall -O2" CPPFLAGS="" LDFLAGS="" /home/davide/debian/glipper/glipper-1.0/./configure --build=i486-linux-gnu --prefix=/usr --includedir="\${prefix}/include" --mandir="\${prefix}/share/man" --infodir="\${prefix}/share/info" --sysconfdir=/etc --localstatedir=/var --libexecdir="\${prefix}/lib/glipper" --disable-maintainer-mode --disable-dependency-tracking --srcdir=.  --prefix=/usr --with-gconf-schema-file-dir=/usr/share/gconf/schemas 
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... i486-pc-linux-gnu
+checking host system type... i486-pc-linux-gnu
+checking for style of include used by make... GNU
+checking for gcc... cc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking dependency style of cc... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ld used by cc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking whether ln -s works... yes
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... cc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking how to run the C++ preprocessor... g++ -E
+checking for g77... no
+checking for xlf... no
+checking for f77... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for xlf90... no
+checking for f90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for gfortran... no
+checking for g95... no
+checking for xlf95... no
+checking for f95... no
+checking for fort... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking the maximum length of command line arguments... 32768
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... ranlib
+checking for strip... strip
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC
+checking if cc PIC flag -fPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking whether the cc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by g++... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC
+checking if g++ PIC flag -fPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking for gcc... (cached) cc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to accept ISO C89... (cached) none needed
+checking dependency style of cc... (cached) none
+checking for pkg-config... yes
+checking for intltool >= 0.35.0... 0.35.5 found
+checking for perl... /usr/bin/perl
+checking for XML::Parser... ok
+checking for iconv... /usr/bin/iconv
+checking for msgfmt... /usr/bin/msgfmt
+checking for msgmerge... /usr/bin/msgmerge
+checking for xgettext... /usr/bin/xgettext
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for LC_MESSAGES... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking for ngettext in libc... yes
+checking for dgettext in libc... yes
+checking for bind_textdomain_codeset... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for dcgettext... yes
+checking if msgfmt accepts -c... yes
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for gconftool-2... /usr/bin/gconftool-2
+Using config source xml:merged:/etc/gconf/gconf.xml.defaults for schema installation
+Using /usr/share/gconf/schemas as install directory for schema files
+checking for a Python interpreter with version >= 2.4... python
+checking for python... /usr/bin/python
+checking for python version... 2.4
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.4/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.4/site-packages
+checking for headers required to compile python extensions... found
+checking for GLIPPER... yes
+checking for gnomeapplet module... yes
+checking for pygtk-codegen-2.0... /usr/bin/pygtk-codegen-2.0
+checking for pygtk defs... /usr/share/pygtk/2.0/defs
+checking for prctl... yes
+checking whether PR_SET_NAME is declared... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating glipper/Makefile
+config.status: creating glipper/defs.py
+config.status: creating glipper/plugins/Makefile
+config.status: creating glipper/keybinder/Makefile
+config.status: creating glipper/osutils/Makefile
+config.status: creating data/Makefile
+config.status: creating data/glipper.pc
+config.status: WARNING:  data/glipper.pc.in seems to ignore the --datarootdir setting
+config.status: creating data/art/Makefile
+config.status: creating po/Makefile.in
+config.status: creating help/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing intltool commands
+config.status: executing default-1 commands
+config.status: executing po/stamp-it commands
+
+glipper v1.0
+
+Prefix............... : /usr
+
+/usr/bin/make -C . 
+make[1]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+/usr/bin/make  all-recursive
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+Making all in glipper
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+sed -e "s|\@PYTHONDIR\@|/usr/lib/python2.4/site-packages/glipper|" glipper.py > glipper
+/usr/bin/make  all-recursive
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+Making all in keybinder
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+/bin/sh ../../libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0      -g -Wall -O2 -c -o _keybindermodule.lo _keybindermodule.c
+mkdir .libs
+ cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0 -g -Wall -O2 -c _keybindermodule.c  -fPIC -DPIC -o .libs/_keybindermodule.o
+/bin/sh ../../libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0      -g -Wall -O2 -c -o eggaccelerators.lo eggaccelerators.c
+ cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0 -g -Wall -O2 -c eggaccelerators.c  -fPIC -DPIC -o .libs/eggaccelerators.o
+/bin/sh ../../libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0      -g -Wall -O2 -c -o tomboykeybinder.lo tomboykeybinder.c
+ cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0 -g -Wall -O2 -c tomboykeybinder.c  -fPIC -DPIC -o .libs/tomboykeybinder.o
+(cd . \
+	 && /usr/bin/pygtk-codegen-2.0 \
+	    --override _keybinder.override \
+	    --register /usr/share/pygtk/2.0/defs/gtk-types.defs \
+	    --register /usr/share/pygtk/2.0/defs/gdk-types.defs \
+	    --prefix py_keybinder _keybinder.defs) > gen-_keybinder.c \
+	&& cp gen-_keybinder.c _keybinder.c \
+	&& rm -f gen-_keybinder.c
+***INFO*** The coverage of global functions is 100.00% (4/4)
+***INFO*** There are no declared methods.
+***INFO*** There are no declared virtual proxies.
+***INFO*** There are no declared virtual accessors.
+***INFO*** There are no declared interface proxies.
+/bin/sh ../../libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0      -g -Wall -O2 -c -o _keybinder.lo _keybinder.c
+ cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0 -g -Wall -O2 -c _keybinder.c  -fPIC -DPIC -o .libs/_keybinder.o
+_keybinder.override: In function '_wrap_tomboy_keybinder_unbind':
+_keybinder.override:108: warning: unused variable 'first'
+/bin/sh ../../libtool --tag=CC   --mode=link cc  -g -Wall -O2 -module -avoid-version -export-symbols-regex init_keybinder  -o _keybinder.la -rpath /usr/lib/python2.4/site-packages/glipper/keybinder _keybindermodule.lo eggaccelerators.lo tomboykeybinder.lo _keybinder.lo -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXfixes -lpango-1.0 -lcairo -lX11 -lgmodule-2.0 -ldl -lgobject-2.0 -lglib-2.0   
+generating symbol list for `_keybinder.la'
+/usr/bin/nm -B  .libs/_keybindermodule.o .libs/eggaccelerators.o .libs/tomboykeybinder.o .libs/_keybinder.o  | sed -n -e 's/^.*[ 	]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ 	][ 	]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /bin/sed 's/.* //' | sort | uniq > .libs/_keybinder.exp
+/bin/grep -E -e "init_keybinder" ".libs/_keybinder.exp" > ".libs/_keybinder.expT"
+mv -f ".libs/_keybinder.expT" ".libs/_keybinder.exp"
+echo "{ global:" > .libs/_keybinder.ver
+ cat .libs/_keybinder.exp | sed -e "s/\(.*\)/\1;/" >> .libs/_keybinder.ver
+ echo "local: *; };" >> .libs/_keybinder.ver
+ cc -shared  .libs/_keybindermodule.o .libs/eggaccelerators.o .libs/tomboykeybinder.o .libs/_keybinder.o  /usr/lib/libgtk-x11-2.0.so /usr/lib/libgdk-x11-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libgdk_pixbuf-2.0.so -lm /usr/lib/libpangocairo-1.0.so -lfontconfig -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXfixes /usr/lib/libpango-1.0.so /usr/lib/libcairo.so -lX11 /usr/lib/libgmodule-2.0.so -ldl /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so  -Wl,-soname -Wl,_keybinder.so -Wl,-version-script -Wl,.libs/_keybinder.ver -o .libs/_keybinder.so
+creating _keybinder.la
+(cd .libs && rm -f _keybinder.la && ln -s ../_keybinder.la _keybinder.la)
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+Making all in osutils
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+/bin/sh ../../libtool --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0      -g -Wall -O2 -c -o _osutilsmodule.lo _osutilsmodule.c
+mkdir .libs
+ cc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/python2.4 -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -I/usr/include/pygtk-2.0 -I/usr/include/gnome-python-2.0 -g -Wall -O2 -c _osutilsmodule.c  -fPIC -DPIC -o .libs/_osutilsmodule.o
+/bin/sh ../../libtool --tag=CC   --mode=link cc  -g -Wall -O2 -module -avoid-version init_osutils  -o _osutils.la -rpath /usr/lib/python2.4/site-packages/glipper/osutils _osutilsmodule.lo -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXfixes -lpango-1.0 -lcairo -lX11 -lgmodule-2.0 -ldl -lgobject-2.0 -lglib-2.0   
+cc -shared  .libs/_osutilsmodule.o  /usr/lib/libgtk-x11-2.0.so /usr/lib/libgdk-x11-2.0.so /usr/lib/libatk-1.0.so /usr/lib/libgdk_pixbuf-2.0.so -lm /usr/lib/libpangocairo-1.0.so -lfontconfig -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXfixes /usr/lib/libpango-1.0.so /usr/lib/libcairo.so -lX11 /usr/lib/libgmodule-2.0.so -ldl /usr/lib/libgobject-2.0.so /usr/lib/libglib-2.0.so  -Wl,-soname -Wl,_osutils.so -o .libs/_osutils.so
+creating _osutils.la
+(cd .libs && rm -f _osutils.la && ln -s ../_osutils.la _osutils.la)
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+Making all in plugins
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[5]: Nothing to be done for `all-am'.
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+Making all in data
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data'
+Making all in art
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data'
+LC_ALL=C ../intltool-merge -s -u -c ../po/.intltool-merge-cache ../po glipper.schemas.in glipper.schemas
+Generating and caching the translation database
+Merging translations into glipper.schemas.
+sed -e "s|\@LIBEXECDIR\@|/usr/lib/glipper|" Glipper.server.in.in > Glipper.server.in
+LC_ALL=C ../intltool-merge -o -u -c ../po/.intltool-merge-cache ../po Glipper.server.in Glipper.server
+Found cached translation database
+Merging translations into Glipper.server.
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data'
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data'
+Making all in po
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/po'
+file=`echo de | sed 's,.*/,,'`.gmo \
+	  && rm -f $file && /usr/bin/msgfmt -o $file de.po
+file=`echo it | sed 's,.*/,,'`.gmo \
+	  && rm -f $file && /usr/bin/msgfmt -o $file it.po
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/po'
+Making all in help
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/help'
+if ! test -d de/; then mkdir de/; fi
+if [ -f "C/glipper.xml" ]; then d="../"; else d="/home/davide/debian/glipper/glipper-1.0/help/"; fi; \
+	(cd de/ && \
+	  `which xml2po` -e -p \
+	    "${d}de/de.po" \
+	    "${d}C/glipper.xml" > glipper.xml.tmp && \
+	    cp glipper.xml.tmp glipper.xml && rm -f glipper.xml.tmp)
+if ! test -d fr/; then mkdir fr/; fi
+if [ -f "C/glipper.xml" ]; then d="../"; else d="/home/davide/debian/glipper/glipper-1.0/help/"; fi; \
+	(cd fr/ && \
+	  `which xml2po` -e -p \
+	    "${d}fr/fr.po" \
+	    "${d}C/glipper.xml" > glipper.xml.tmp && \
+	    cp glipper.xml.tmp glipper.xml && rm -f glipper.xml.tmp)
+if ! test -d it/; then mkdir it/; fi
+if [ -f "C/glipper.xml" ]; then d="../"; else d="/home/davide/debian/glipper/glipper-1.0/help/"; fi; \
+	(cd it/ && \
+	  `which xml2po` -e -p \
+	    "${d}it/it.po" \
+	    "${d}C/glipper.xml" > glipper.xml.tmp && \
+	    cp glipper.xml.tmp glipper.xml && rm -f glipper.xml.tmp)
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/help'
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+make[1]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+touch debian/stamp-makefile-build
+DEB_MAKE_CHECK_TARGET unset, not running checks
+ fakeroot debian/rules binary
+test -x debian/rules
+test "`id -u`" = 0
+dh_clean -k 
+dh_installdirs -A 
+mkdir -p "."
+if test -e /usr/share/misc/config.guess ; then \
+		for i in ./config.guess ; do \
+			if ! test -e $i.cdbs-orig ; then \
+				mv $i $i.cdbs-orig ; \
+				cp --remove-destination /usr/share/misc/config.guess $i ; \
+			fi ; \
+		done ; \
+	fi
+if test -e /usr/share/misc/config.sub ; then \
+		for i in ./config.sub ; do \
+			if ! test -e $i.cdbs-orig ; then \
+				mv $i $i.cdbs-orig ; \
+				cp --remove-destination /usr/share/misc/config.sub $i ; \
+			fi ; \
+		done ; \
+	fi
+DEB_MAKE_CHECK_TARGET unset, not running checks
+/usr/bin/make -C . install DESTDIR=/home/davide/debian/glipper/glipper-1.0/debian/glipper/
+make[1]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+Making install in glipper
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+/usr/bin/make  install-recursive
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+Making install in keybinder
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/usr/lib/python2.4/site-packages/glipper/keybinder" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/keybinder"
+ /bin/sh ../../libtool --mode=install /usr/bin/install -c  '_keybinder.la' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/keybinder/_keybinder.la'
+/usr/bin/install -c .libs/_keybinder.so /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/keybinder/_keybinder.so
+/usr/bin/install -c .libs/_keybinder.lai /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/keybinder/_keybinder.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib/python2.4/site-packages/glipper/keybinder'
+test -z "/usr/lib/python2.4/site-packages/glipper/keybinder" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/keybinder"
+ /usr/bin/install -c -m 644 '__init__.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/keybinder/__init__.py'
+Byte-compiling python modules...
+__init__.py
+Byte-compiling python modules (optimized versions) ...
+__init__.py
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/keybinder'
+Making install in osutils
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/usr/lib/python2.4/site-packages/glipper/osutils" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/osutils"
+ /bin/sh ../../libtool --mode=install /usr/bin/install -c  '_osutils.la' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/osutils/_osutils.la'
+/usr/bin/install -c .libs/_osutils.so /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/osutils/_osutils.so
+/usr/bin/install -c .libs/_osutils.lai /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/osutils/_osutils.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib/python2.4/site-packages/glipper/osutils'
+test -z "/usr/lib/python2.4/site-packages/glipper/osutils" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/osutils"
+ /usr/bin/install -c -m 644 '__init__.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/osutils/__init__.py'
+Byte-compiling python modules...
+__init__.py
+Byte-compiling python modules (optimized versions) ...
+__init__.py
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/osutils'
+Making install in plugins
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/glipper/plugins" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins"
+ /usr/bin/install -c -m 644 'actions.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/actions.py'
+ /usr/bin/install -c -m 644 'grow.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/grow.py'
+ /usr/bin/install -c -m 644 'network.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/network.py'
+ /usr/bin/install -c -m 644 'newline.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/newline.py'
+ /usr/bin/install -c -m 644 'nopaste.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/nopaste.py'
+ /usr/bin/install -c -m 644 'snippets.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/snippets.py'
+ /usr/bin/install -c -m 644 'actions.glade' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/actions.glade'
+ /usr/bin/install -c -m 644 'network.glade' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/network.glade'
+ /usr/bin/install -c -m 644 'nopaste.glade' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/nopaste.glade'
+ /usr/bin/install -c -m 644 'snippets.glade' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins/snippets.glade'
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper/plugins'
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/usr/lib/python2.4/site-packages/glipper" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper"
+ /usr/bin/install -c -m 644 'defs.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/defs.py'
+ /usr/bin/install -c -m 644 'Applet.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/Applet.py'
+ /usr/bin/install -c -m 644 'History.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/History.py'
+ /usr/bin/install -c -m 644 'Clipboards.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/Clipboards.py'
+ /usr/bin/install -c -m 644 'Properties.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/Properties.py'
+ /usr/bin/install -c -m 644 'Plugin.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/Plugin.py'
+ /usr/bin/install -c -m 644 'PluginsManager.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/PluginsManager.py'
+ /usr/bin/install -c -m 644 'About.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/About.py'
+ /usr/bin/install -c -m 644 '__init__.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/__init__.py'
+ /usr/bin/install -c -m 644 'Keybinder.py' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/python2.4/site-packages/glipper/Keybinder.py'
+Byte-compiling python modules...
+defs.py Applet.py History.py Clipboards.py Properties.py Plugin.py PluginsManager.py About.py __init__.py Keybinder.py
+Byte-compiling python modules (optimized versions) ...
+defs.py Applet.py History.py Clipboards.py Properties.py Plugin.py PluginsManager.py About.py __init__.py Keybinder.py
+test -z "/usr/lib/glipper" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/glipper"
+ /usr/bin/install -c 'glipper' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/glipper/glipper'
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/glipper'
+Making install in data
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data'
+Making install in art
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/icons/hicolor/22x22/apps" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/icons/hicolor/22x22/apps"
+ /usr/bin/install -c -m 644 '22x22/glipper.png' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/icons/hicolor/22x22/apps/glipper.png'
+test -z "/usr/share/icons/hicolor/48x48/apps" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/icons/hicolor/48x48/apps"
+ /usr/bin/install -c -m 644 'scalable/glipper.png' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/icons/hicolor/48x48/apps/glipper.png'
+test -z "/usr/share/icons/hicolor/scalable/apps" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/icons/hicolor/scalable/apps"
+ /usr/bin/install -c -m 644 'scalable/glipper.svg' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/icons/hicolor/scalable/apps/glipper.svg'
+/usr/bin/make  install-data-hook
+make[5]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+*** Icon cache not updated.  After (un)install, run this:
+***   gtk-update-icon-cache -f -t /usr/share/icons/hicolor
+make[5]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data/art'
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data'
+make[4]: Entering directory `/home/davide/debian/glipper/glipper-1.0/data'
+make[4]: Nothing to be done for `install-exec-am'.
+GCONF_CONFIG_SOURCE=xml:merged:/etc/gconf/gconf.xml.defaults \
+		/usr/bin/gconftool-2 --makefile-install-rule glipper.schemas
+
+(gconftool-2:25392): GConf-WARNING **: Nessuno degli indirizzi risolti è scrivibile; non sarà possibile salvare le impostazioni di configurazione
+Schema "/schemas/apps/glipper/max_elements" associato alla chiave "/apps/glipper/max_elements"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/max_elements" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/max_elements" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+Schema "/schemas/apps/glipper/max_item_length" associato alla chiave "/apps/glipper/max_item_length"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/max_item_length" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/max_item_length" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+Schema "/schemas/apps/glipper/use_default_clipboard" associato alla chiave "/apps/glipper/use_default_clipboard"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/use_default_clipboard" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/use_default_clipboard" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+Schema "/schemas/apps/glipper/use_primary_clipboard" associato alla chiave "/apps/glipper/use_primary_clipboard"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/use_primary_clipboard" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/use_primary_clipboard" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+Schema "/schemas/apps/glipper/mark_default_entry" associato alla chiave "/apps/glipper/mark_default_entry"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/mark_default_entry" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/mark_default_entry" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+Schema "/schemas/apps/glipper/save_history" associato alla chiave "/apps/glipper/save_history"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/save_history" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/save_history" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+Schema "/schemas/apps/glipper/key_combination" associato alla chiave "/apps/glipper/key_combination"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/key_combination" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/key_combination" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+Schema "/schemas/apps/glipper/autostart_plugins" associato alla chiave "/apps/glipper/autostart_plugins"
+ATTENZIONE: installazione dello schema "/schemas/apps/glipper/autostart_plugins" locale "C" fallita: Impossibile sovrascrivere il valore di sola lettura esistente: Valore per "/schemas/apps/glipper/autostart_plugins" impostato in una sorgente in sola lettura all'apice del percorso della configurazione
+test -z "/usr/lib/pkgconfig" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/pkgconfig"
+ /usr/bin/install -c -m 644 'glipper.pc' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/pkgconfig/glipper.pc'
+test -z "/usr/share/glipper" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper"
+ /usr/bin/install -c -m 644 'Glipper.xml' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/Glipper.xml'
+ /usr/bin/install -c -m 644 'properties-window.glade' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/properties-window.glade'
+ /usr/bin/install -c -m 644 'plugins-window.glade' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/glipper/plugins-window.glade'
+test -z "/usr/share/gconf/schemas" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gconf/schemas"
+ /usr/bin/install -c -m 644 'glipper.schemas' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gconf/schemas/glipper.schemas'
+test -z "/usr/lib/bonobo/servers" || /bin/mkdir -p "/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/bonobo/servers"
+ /usr/bin/install -c -m 644 'Glipper.server' '/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/lib/bonobo/servers/Glipper.server'
+make[4]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data'
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data'
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/data'
+Making install in po
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/po'
+/bin/sh /home/davide/debian/glipper/glipper-1.0/install-sh -d /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/locale
+linguas="de it "; \
+	for lang in $linguas; do \
+	  dir=/home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/locale/$lang/LC_MESSAGES; \
+	  /bin/sh /home/davide/debian/glipper/glipper-1.0/install-sh -d $dir; \
+	  if test -r $lang.gmo; then \
+	    /usr/bin/install -c -m 644 $lang.gmo $dir/glipper.mo; \
+	    echo "installing $lang.gmo as $dir/glipper.mo"; \
+	  else \
+	    /usr/bin/install -c -m 644 ./$lang.gmo $dir/glipper.mo; \
+	    echo "installing ./$lang.gmo as" \
+		 "$dir/glipper.mo"; \
+	  fi; \
+	  if test -r $lang.gmo.m; then \
+	    /usr/bin/install -c -m 644 $lang.gmo.m $dir/glipper.mo.m; \
+	    echo "installing $lang.gmo.m as $dir/glipper.mo.m"; \
+	  else \
+	    if test -r ./$lang.gmo.m ; then \
+	      /usr/bin/install -c -m 644 ./$lang.gmo.m \
+		$dir/glipper.mo.m; \
+	      echo "installing ./$lang.gmo.m as" \
+		   "$dir/glipper.mo.m"; \
+	    else \
+	      true; \
+	    fi; \
+	  fi; \
+	done
+installing de.gmo as /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/locale/de/LC_MESSAGES/glipper.mo
+installing it.gmo as /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/locale/it/LC_MESSAGES/glipper.mo
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/po'
+Making install in help
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0/help'
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0/help'
+make[3]: Nothing to be done for `install-exec-am'.
+/bin/sh ../mkinstalldirs /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/C
+mkdir -p -- /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/C
+/bin/sh ../mkinstalldirs /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/de
+mkdir -p -- /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/de
+/bin/sh ../mkinstalldirs /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/fr
+mkdir -p -- /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/fr
+/bin/sh ../mkinstalldirs /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/it
+mkdir -p -- /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/it
+/usr/bin/install -c -m 644 C/glipper.xml /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/C/glipper.xml
+/usr/bin/install -c -m 644 de/glipper.xml /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/de/glipper.xml
+/usr/bin/install -c -m 644 fr/glipper.xml /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/fr/glipper.xml
+/usr/bin/install -c -m 644 it/glipper.xml /home/davide/debian/glipper/glipper-1.0/debian/glipper//usr/share/gnome/help/glipper/it/glipper.xml
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/help'
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0/help'
+make[2]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+make[3]: Entering directory `/home/davide/debian/glipper/glipper-1.0'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+make[2]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+make[1]: Leaving directory `/home/davide/debian/glipper/glipper-1.0'
+dh_installdirs -pglipper 
+dh_installdocs -pglipper ./README ./NEWS ./TODO ./AUTHORS  
+dh_installexamples -pglipper 
+dh_installman -pglipper  
+dh_installinfo -pglipper  
+dh_installmenu -pglipper 
+dh_installcron -pglipper 
+dh_installinit -pglipper   
+dh_installdebconf -pglipper 
+dh_installemacsen -pglipper   
+dh_installcatalogs -pglipper 
+dh_installpam -pglipper 
+dh_installlogrotate -pglipper 
+dh_installlogcheck -pglipper 
+dh_installmime -pglipper 
+dh_installchangelogs -pglipper  ./ChangeLog 
+dh_installudev -pglipper 
+dh_install -pglipper  
+dh_link -pglipper  
+dh_pycentral -pglipper
+mv /home/davide/debian/glipper/glipper-1.0/debian/glipper/usr/share/pycentral/glipper/site-packages/glipper/osutils/*.la \
+		/home/davide/debian/glipper/glipper-1.0/debian/glipper/usr/lib/python2.4/site-packages/glipper/osutils/
+mv /home/davide/debian/glipper/glipper-1.0/debian/glipper/usr/share/pycentral/glipper/site-packages/glipper/keybinder/*.la \
+		/home/davide/debian/glipper/glipper-1.0/debian/glipper/usr/lib/python2.4/site-packages/glipper/keybinder/
+dh_strip -pglipper  
+dh_compress -pglipper  
+dh_fixperms -pglipper  
+dh_makeshlibs -pglipper  
+dh_installdeb -pglipper 
+dh_perl -pglipper 
+dh_shlibdeps -pglipper    
+dh_gencontrol -pglipper 
+dh_md5sums -pglipper 
+dh_builddeb -pglipper 
+attenzione, `debian/glipper/DEBIAN/control' contiene un campo `Python-Version' definito dall'utente
+dpkg-dev: 1 avvisi relativi ai file di controllo vengono ignorati
+dpkg-deb: costruisco il pacchetto `glipper' in `../glipper_1.0-1_i386.deb'.
+ dpkg-genchanges
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage (debuild emulation): full upload (original source is included)
+Now running lintian...
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile glipper_1.0-1.dsc Davide Truffa <davide@catoblepa.org>
+gpg: gpg-agent is not available in this session
+
+ signfile glipper_1.0-1_i386.changes Davide Truffa <davide@catoblepa.org>
+gpg: gpg-agent is not available in this session
+
+Successfully signed dsc and changes files

@@ -1,0 +1,31 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.7
+Date: Sun, 23 Sep 2007 01:52:18 +0200
+Source: shownews
+Binary: shownews
+Architecture: source i386
+Version: 0.0.1-2
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ shownews   - a very light text-based newsreader
+Changes: 
+ shownews (0.0.1-2) unstable; urgency=low
+ .
+   * Some bug fixes...
+Files: 
+ e9fc381d3e343ec25d966ad3c7fb6f85 631 net optional shownews_0.0.1-2.dsc
+ cdf4a62411bd63fd517abbf4ff7bba8c 1755 net optional shownews_0.0.1-2.diff.gz
+ 7a580f3c8b1cb5aaf78477f60e9ae7b6 20758 net optional shownews_0.0.1-2_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFG9asxAIz/pxUagfgRAjLAAJ9rwnU6Avr57CtzcuZMgip7voZSMACgtdSM
+VFO5SHl6d7FHERDMhzW2SMY=
+=svVv
+-----END PGP SIGNATURE-----

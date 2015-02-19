@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.7
+Date: Sun, 11 Nov 2007 21:28:51 +0100
+Source: tilda
+Binary: tilda
+Architecture: source i386
+Version: 0.09.4+cvs20071012-1
+Distribution: unstable
+Urgency: high
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ tilda      - terminal emulator with first person shooter console likeness
+Closes: 432111 446745
+Changes: 
+ tilda (0.09.4+cvs20071012-1) unstable; urgency=high
+ .
+   * New upstream release from CVS snapshot 20071012 (Closes: #446745, #432111)
+     - removed old patch
+     - added 01_general-fixes.patch to debianize this CVS snapshot
+     - new build depends on: automake, cvs, flex, libglade2-dev
+     - updated copyright file
+     - updated README.Debian
+   * Added Italian translation (02_italian-translation.dpatch)
+   * Updated menu structure
+Files: 
+ 65cf9421abfc0216d27a740f5f0f88cb 769 x11 optional tilda_0.09.4+cvs20071012-1.dsc
+ 1359ba06749e73628f0a23d47162a6fe 62832 x11 optional tilda_0.09.4+cvs20071012.orig.tar.gz
+ 0cb7ce4bc9fb2d687e83ad5d22ce2bff 8208 x11 optional tilda_0.09.4+cvs20071012-1.diff.gz
+ 0d2d3e53e845ae6067c52161a0484301 50380 x11 optional tilda_0.09.4+cvs20071012-1_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFHN24/AIz/pxUagfgRArQ2AKCcNOo50FPbLPdnTa65JKE/kASonACgpEwF
+i0GkiGTh3Ec+a2sDULJTdaQ=
+=Sz68
+-----END PGP SIGNATURE-----

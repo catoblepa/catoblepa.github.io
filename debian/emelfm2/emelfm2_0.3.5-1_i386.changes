@@ -1,0 +1,33 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.7
+Date: Thu, 06 Sep 2007 14:35:23 +0200
+Source: emelfm2
+Binary: emelfm2
+Architecture: source i386
+Version: 0.3.5-1
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ emelfm2    - Two-panel file manager in GTK2
+Closes: 433530
+Changes: 
+ emelfm2 (0.3.5-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #433530)
+Files: 
+ 29452591dae8007797a31ecfcb2a6478 593 utils optional emelfm2_0.3.5-1.dsc
+ 4f5a065a7d35371a920533153f24e362 1081106 utils optional emelfm2_0.3.5.orig.tar.gz
+ 937cd12d86f205bbb6f47d748e87cc30 7851 utils optional emelfm2_0.3.5-1.diff.gz
+ 88f3472ed540be2158e528e266e220cd 654762 utils optional emelfm2_0.3.5-1_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFG5JSQAIz/pxUagfgRAmTuAKDMV4aqM8y/Vp8lEqrfqv1LQpv8bgCfVVbQ
+BdvnETyCOGW6NbLMKETIH2s=
+=Vc9x
+-----END PGP SIGNATURE-----

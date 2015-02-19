@@ -1,0 +1,32 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.7
+Date: Sun, 09 Sep 2007 18:27:26 +0200
+Source: glipper
+Binary: glipper
+Architecture: source i386
+Version: 1.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ glipper    - A clipboard manager for GNOME and other window managers
+Changes: 
+ glipper (1.0-1) unstable; urgency=low
+ .
+   * New upstream release.
+Files: 
+ 8cc59a1d0cb19aca07e54dcfd3ecd137 687 utils optional glipper_1.0-1.dsc
+ 7209a4442c6d0e83395b3065c96fe56e 491671 utils optional glipper_1.0.orig.tar.gz
+ df4686347f6090f6c6e42668a4202bb0 9107 utils optional glipper_1.0-1.diff.gz
+ feccd3664e9a5ec34ad67e16ade032f7 70728 utils optional glipper_1.0-1_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFG5J1KAIz/pxUagfgRAgRpAKCD+sodYm1wpXeX8LK6lVFQor719wCeI4Vh
+pJefIJqNaN6GxfxCyNMFDFA=
+=mVpn
+-----END PGP SIGNATURE-----

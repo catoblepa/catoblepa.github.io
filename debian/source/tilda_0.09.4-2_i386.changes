@@ -1,0 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.7
+Date: Tue, 24 Apr 2007 18:37:14 +0200
+Source: tilda
+Binary: tilda
+Architecture: source i386
+Version: 0.09.4-2
+Distribution: unstable
+Urgency: low
+Maintainer: Davide Truffa <davide@catoblepa.org>
+Changed-By: Davide Truffa <davide@catoblepa.org>
+Description: 
+ tilda      - terminal emulator with first person shooter console likeness
+Closes: 336013
+Changes: 
+ tilda (0.09.4-2) unstable; urgency=low
+ .
+   * Fixed segfaults when wrong keybinding (Closes: #336013).
+     (patch from Launchpad)
+   * New man page.
+Files: 
+ 66535e80af02479595f1d057242343c6 649 x11 optional tilda_0.09.4-2.dsc
+ fca92b5caa2daa32da36f41580e84ba9 28474 x11 optional tilda_0.09.4-2.diff.gz
+ c28b249416b8267da6b1f1242da99e9c 39302 x11 optional tilda_0.09.4-2_i386.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (GNU/Linux)
+
+iD8DBQFGL0qjAIz/pxUagfgRAmVEAJ0WethBGd8RavPoruGGGxIQau+XuQCdHT3H
+AUzZ+pyPCh/V+qSWB/g29KE=
+=rZWN
+-----END PGP SIGNATURE-----

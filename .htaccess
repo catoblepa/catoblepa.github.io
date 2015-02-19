@@ -1,0 +1,24 @@
+## error documents
+ErrorDocument 403 /misc/404.html
+ErrorDocument 404 /misc/404.html
+
+## redirect /blog to subdomain
+Redirect permanent /blog http://blog.catoblepa.org
+
+## rewrite
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	## rewrite /cms/ to /
+	#RewriteBase /
+	#RewriteCond %{REQUEST_URI} !^/cms/.*$
+	#RewriteRule ^(.*)$ /cms/$1
+</IfModule>
+
+## abilito cache del browser
+<ifmodule mod_expires.c>
+	<filesMatch "\.(txt|xml|js|css|jpg|jpeg|png|gif|swf|woff)$">
+		Header append Cache-Control "public"
+		ExpiresActive on
+		ExpiresDefault "access plus 1 year"
+	</filesmatch>
+</ifmodule>
