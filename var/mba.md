@@ -1,3 +1,8 @@
+---
+title: Mappatura Barriere Architettoniche - Alessandria
+layout: post
+---
+
 Mappatura Barriere Architettoniche - Alessandria
 ================================================
 
