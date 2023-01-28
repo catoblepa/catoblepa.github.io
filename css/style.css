@@ -1,6 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 body {
-font-family: 'Indie Flower', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+font-weight: 400;
 font-size: 16px;
 margin: 20px auto;
 text-align:center;
